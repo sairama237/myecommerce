@@ -1,0 +1,26 @@
+<p>
+  imageswithapi works!
+</p>
+
+<table class="table table-bordered">
+  <thead>
+    <th>image id</th>
+    <th>image src</th>
+    <th>image from upload</th>
+  </thead>
+  <tr *ngFor = "let image of myIamges">
+      <td>{{image.id}}</td>
+      <!-- <td>{{image.updated_at}}</td> -->
+      <!-- <td>{{image.urls.raw}}</td> -->
+      <td><img [src]="image.urls.raw" alt="" width="600px"height="500px"></td>
+      <td><button onclick="myFunction()">upload file</button></td>
+  </tr>
+ 
+</table>
+<script>
+    function myFunction() {
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "file");
+        document.body.appendChild(x);
+      }
+</script>

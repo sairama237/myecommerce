@@ -1,0 +1,8 @@
+<p>
+  parentdata works!
+</p>
+<div>
+  this is parent data<br> {{childData.id}}
+          
+</div>
+<app-childdata [uname] = "name1" (myNotify) = "myparMethod($event)"></app-childdata>

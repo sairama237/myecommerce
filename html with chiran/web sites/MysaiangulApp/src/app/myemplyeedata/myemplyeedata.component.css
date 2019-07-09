@@ -1,0 +1,7 @@
+.myclasse{
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold
+}

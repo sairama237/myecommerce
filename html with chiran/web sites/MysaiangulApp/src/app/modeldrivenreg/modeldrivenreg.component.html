@@ -1,0 +1,94 @@
+<p>
+  modeldrivenreg works!
+</p>
+<div class="jumbotron">
+  <h1 style="color:brown;background-color:goldenrod">Resignatation form</h1>
+  <form action="" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <!-- main={{userForm.value |json}}
+    main={{userForm.status}} -->
+    <div class="form-group">
+      <label for="">User name:</label>
+      <input type="text" placeholder="username" class="form-control" formControlName="username">
+      <!-- <div *ngIf ="userForm.controls['username'].hasError('required')" class="alert alert-primary">
+    
+        Name is required.
+      </div>
+      <div *ngIf ="userForm.controls['username'].hasError('minlength')" class="alert alert-danger">
+    
+          please enter atleast 4 charachers.
+        </div>
+        <div *ngIf ="userForm.controls['username'].hasError('maxlength')" class="alert alert-info">
+    
+            please enter atleast 10 charachers.
+          </div>
+</div> -->
+
+      <div *ngIf="submitted && userForm.get('username').errors">
+        <div *ngIf="userForm.get('username')['errors']['required']">
+          <small class=" form-text text-danger">user name is required</small>
+        </div>
+        <div *ngIf="userForm.get('username')['errors']['minlength']">
+          <small class=" form-text text-danger">user name is min with 4 charachers</small>
+        </div>
+        <div *ngIf="userForm.get('username')['errors']['maxlength']">
+          <small class=" form-text text-danger">user name is max with 10 charachers</small>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" placeholder="password" class="form-control " formControlName="password">
+
+      </div>
+
+      <div class="form-group">
+        <label for="">retry-Password</label>
+        <input type="password" placeholder="retry-password" class="form-control" formControlName="retrypassword">
+      </div>
+      <div class="form-group">
+        <label for="">Email id:</label>
+        <input type="email" placeholder="emailid" class="form-control" formControlName="email">
+        <div *ngIf="submitted && userForm.get('email').errors" >
+            <div *ngIf="userForm.get('email')['errors']['required']">
+              <small class=" form-text text-danger">email is required</small>
+            </div>
+            <!-- <div *ngIf="userForm.get('email')['errors']['minlength']">
+              <small class=" form-text text-danger">email is min with 4 charachers</small>
+            </div>
+            <div *ngIf="userForm.get('email')['errors']['maxlength']">
+              <small class=" form-text text-danger">email is max with 10 charachers</small>
+            </div> -->
+            <div *ngIf="userForm.get('email')['errors']['pattern']">
+                <small class=" form-text text-danger">fallow pattern charachers</small>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="">phone number</label>
+        <input type="text" placeholder="phone" class="form-control" formControlName="phone">
+      </div>
+   
+ 
+      <div formGroupName="address">
+        <span class="btn-info">Address details</span>
+        <div class="form-group">
+          <label for="">street</label>
+          <input type="text" placeholder="street" formControlName="street" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">pincode</label>
+          <input type="text" placeholder="pincode" formControlName="pincode" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">city</label>
+          <input type="text" placeholder="city" formControlName="city" class="form-control">
+        </div>
+        <div class=" form-group">
+          <button type="submit" class="form-control btn-outline-danger">Submit Registration</button>
+        </div>
+      </div>
+  </form>
+
+</div>

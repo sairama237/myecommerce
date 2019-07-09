@@ -1,0 +1,20 @@
+h2{
+    color: red;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    /* border-radius: 55px; */
+    background-color: yellow;
+    box-shadow: 5px 5px gray;
+    border: 5px solid rgb(201, 72, 72);
+}
+
+p{
+    color:blueviolet;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}

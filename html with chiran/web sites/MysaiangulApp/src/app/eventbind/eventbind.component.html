@@ -1,0 +1,30 @@
+<p>
+  eventbind works!
+</p>
+
+usename:<input type="text" #uname>
+password:<input type="text" #upass>
+<button type="submit" (click) = "myMethod(uname.value,upass.value)">click here</button>
+
+<h2>Caluclator app using eventbinding concept</h2>
+<fieldset>
+  <legend>Caluclator app</legend>
+<table width=80%>
+  <tr>
+    <td>Frist name:</td>
+<td><input type ="text" #frist></td>
+</tr>
+<tr>
+  <td>Second name:</td>
+<td><input type="text" #second></td>
+</tr>
+<tr>
+<td><button type="submit" (click) = "myAdd(frist.value,second.value)">addition</button> </td>
+<td><button type="submit" (click) = "mySub(frist.value,second.value)">subraction</button></td>
+<td><button type="submit" (click) = "myMul(frist.value,second.value)">multiplication</button></td>
+<td><button type="submit" (click) = "myDiv(frist.value,second.value)">division</button></td>
+</tr>
+</table>
+</fieldset>
+ 
+<app-directives></app-directives>

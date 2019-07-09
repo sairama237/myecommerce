@@ -1,0 +1,28 @@
+<p class="myclasse">
+  myemplyeedata works!
+</p>
+<div class="container-fluid">
+<table class="table table-bordered" >
+  <thead>
+  <tr class="btn-primary myclasse">
+  <td>empid</td>
+  <td>empname</td>
+  <td>empsalary</td>
+  <td>empdesignation</td>
+  <td>emphavingcar</td>
+  <td>empaddress</td>
+  
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let emp of myEmployee" class="btn-danger myclasse">
+  <td>{{emp.empid}}</td>
+  <td>{{emp.empname}}</td>
+  <td>{{emp.empsalary}}</td>
+  <td>{{emp.empdesignation}}</td>
+  <td>{{emp.emphavingcar}}</td>
+  <td>{{emp.empaddress}}</td>
+</tr>
+</tbody>
+</table>
+</div>

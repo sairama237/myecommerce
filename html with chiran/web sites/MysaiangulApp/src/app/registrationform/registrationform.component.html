@@ -1,0 +1,76 @@
+<p style="text-align:center;background-color:red;font-family: cursive;font-size: 25px;text-transform: uppercase">
+  registrationform works!
+</p>
+
+<div class="container-fluid">
+  <form action="" #userForm =ngForm (ngSubmit)="mybtton(userForm)">
+{{userForm.value |json}} 
+<hr>
+{{userModel |json}}
+    <div class="form-group">
+      <label class="btn-info">Username:</label>
+      <input type="text" #usernam="ngModel"    placeholder="Username"
+        class="form-control is-invalid" name="username" [(ngModel)]="userModel.usename">
+      <!-- <div *ngIf="usernam.errors && (usernam.dirty || usernam.touched)" class="alert alert-info">
+        <div [hidden]="!usernam.errors.required"> Enter name  </div>
+        <div [hidden]="!usernam.errors.minlength"> Enter atleast 4 charters  </div>
+        <div [hidden]="!usernam.errors.maxlength"> Enter atleast 6 charters  </div>
+        <div [hidden]="!usernam.errors.pattern"> Enter valid data  </div>
+     
+    </div> -->
+    <!-- {{usernam.classname}} -->
+</div>
+
+<div class="form-group">
+  <label class="btn-info">Password:</label>
+  <input type="password" 
+   placeholder="Password" class="form-control myclass" name="password" [(ngModel)]="userModel.password">
+</div>
+
+<div class="form-group">
+  <label class="btn-info">Email:</label>
+  <input type="email" placeholder="Email" class="form-control myclass" name="email" ngModel pattern ="^[a-z]+\@[a-z]+(.com|.live.com)" [(ngModel)]="userModel.email">
+</div>
+
+<div class="form-group">
+  <label class="btn-info">phoneNumber:</label>
+  <input type="text" placeholder="phoneNumber" class="form-control"[(ngModel)]="userModel.phoe" #phone="ngModel" required pattern="^[0-9]{10}">
+  <!-- [class.is-invalid]="phone.invalid && phone.touched" 2 ways -->
+  <!-- <small [class.d-none]="phone.valid || phone.untouched">please give 10 numbers</small> 3ways-->
+  <div *ngIf="phone.errors && (phone.invalid ||phone.touched)">
+<small class="text-danger" *ngIf ="phone.errors.required"> phoneNumber is required</small>
+<small class="text-danger" *ngIf ="phone.errors.pattern"> phoneNumber is required 10 digits</small>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="btn-info">course:</label>
+  <input type="checkbox" name="coursehtml" ng-model="myVar"> html
+  <input type="checkbox" name="coursecss" ngModel> css
+
+</div>
+
+<div class="form-group">
+  <label class="btn-info">Gender</label>
+  <input type="radio" value="male" name="gender" ngModel> male
+  <input type="radio" value="female" name="gender" ngModel> female
+
+</div>
+<div class="form-group">
+  <label class="btn-info">Language</label>
+  <select name="" id="">
+    <option value=""> select language</option>
+
+    <option *ngFor="let lang of langs" [value]="lang">
+      {{lang}}
+    </option>
+
+  </select>
+</div>
+<!-- <h1 ng-show="myVar">html is means hyper text markup language</h1> -->
+<div class="form-group ">
+  <button type="submit" class="btn btn-danger">Submit</button>
+</div>
+</form>
+
+</div>

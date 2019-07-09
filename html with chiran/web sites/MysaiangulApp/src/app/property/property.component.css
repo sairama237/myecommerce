@@ -1,0 +1,17 @@
+h1{
+    color:yellowgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold
+
+}
+
+h2{
+    color:red;
+    font-family:cursive;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform:capitalize;
+   
+}

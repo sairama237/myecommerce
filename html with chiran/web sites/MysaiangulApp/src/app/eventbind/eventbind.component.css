@@ -1,0 +1,33 @@
+table,td{
+    color: brown;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+h2{
+    text-align: center;
+    color: blue;
+}
+
+input{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: yellow;
+    background-color: darkgray; 
+}
+legend{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: greenyellow;
+    background-color:#0cdf;
+
+}
+fieldset{
+    background-color:lightgray;
+}
+

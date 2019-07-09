@@ -1,0 +1,22 @@
+<p>
+  directives works!
+</p>
+
+<div
+  *ngIf = "showElement">Show this content 
+</div>
+
+<div [ngSwitch] = "Course">
+  <p *ngSwitchCase = "'java'"> Java courese</p>
+  <p *ngSwitchCase = "'angular'"> Angular courese</p>
+  <p *ngSwitchDefault> invalid courese</p>
+</div>
+
+<ol>
+  <li *ngFor = "let name of names"> {{name}}
+      
+  </li>
+</ol>
+<app-exes></app-exes>
+
+
