@@ -1,0 +1,28 @@
+body{
+background-color:tomato;
+font-family:cursive; 
+font-size:20pt;
+font-weight: bold;
+
+}
+
+a:link{
+color:blue;
+text-decoration:none;
+font-family:'Times New Roman', Times, serif;
+}
+
+a:visted{
+color:red;
+
+}
+
+a:hover{
+color:green;
+
+}
+
+a:active{
+color:orange;
+text-decoration:underline;
+}

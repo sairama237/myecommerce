@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgba(235, 214, 214, 0.986);
+        }
+
+        h3 {
+            color: blue;
+            text-align: center;
+        }
+
+        .mybutton {
+            color: blueviolet;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Banking Deposit and withdraw</legend>
+        <form action="" name="banking">
+            <table width=100%>
+                <h3>Banking Deposit and withdraw</h3>
+                <tr>
+                    <td> <label for=""> Deposit Amount</label></td>
+                    <td> <input type="text" id="deposit" placeholder="Deposit Amount" autofocus></td>
+                        
+                </tr>
+                <tr colspan="3" align="right">
+                    <td> <button type="button" class="mybutton" onclick="c.depositMethod()">Deposit Amount</button></td>
+                </tr>
+                <tr>
+                    <td> <label for=""> Withdraw Amount</label></td>
+                    <td> <input type="text" id="withdraw" name="withdraw" placeholder="Withdraw Amount" autofocus></td>
+                </tr>
+                <tr colspan="3" align="right">
+                    <td> <button type="button" class="mybutton" onclick="c. withdrawlMethod()">Withdraw Amount</button></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+<div id="myamount"></div>
+<div id="withdrawl"></div>
+<div id="amount"></div>
+    <script src="C:\Users\sai\Desktop\html with chiran\web sites\bankingts.js">
+        // function myDespoit() {
+        //     var desp = document.banking.deposit;
+        //     if (desp.value == ""||desp.value == null) {
+        //         // alert("please give value"+desp.value);
+        //         var res;
+        //         res= document.getElementById("deposit").value="please give value"
+        //         return false;
+        //     }
+        // }
+
+        // function myWithdraw(){
+            
+        // }
+
+    </script>
+</body>
+
+</html>

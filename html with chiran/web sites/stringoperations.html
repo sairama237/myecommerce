@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <button type="submit" onclick="myoperation()">ty ti</button>
+        <script>
+            var sai ="hello how r u";
+            document.write(sai.charAt(0));  // h
+            document.write(sai.charAt(7)+"<br>");  // o
+
+            var rama="my name is ramalingeswara sai";
+            document.write("res->"+sai +rama +"<br>");
+            var n =rama.indexOf("rama");
+            document.write(n);
+
+            function myoperation(){
+                var srt = "javascript info";
+                var res = srt.toUpperCase();
+                document.getElementById('demo').innerHTML=res;
+            }
+
+            var srf = "hello getsure HELLO GETSURE INFOTECH";
+            var red = srf.replace("getsure",'ramalingesawara rao');
+            document.writeln(red+"<br>");
+            var red1 = srf.replace("GETSURE",'lingesawara');
+            document.writeln(red1+"<br>");
+
+
+            var d = new Date("2019-05-09");
+document.getElementById("demo1").innerHTML = d;
+            </script>
+    </body>
+</html>

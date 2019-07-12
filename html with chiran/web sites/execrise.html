@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .submit {
+            background-color: red;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0px 25px;
+            margin-bottom: 30px;
+        }
+        .table{ border-color: #673AB7;}
+        .table>tbody>tr>td,.table>thead>tr>th{padding: 15px;text-align: center;}
+            .table>thead>tr>th{background:#673AB7;color:#fff;}
+
+
+
+        /* .submit:hover {
+            cursor: pointer;
+            background-color: yellowgreen;
+            box-shadow: 10px 5px gray;
+        } */
+    </style>
+</head>
+
+<body>
+   <form action="#" name="form">
+       
+            <label for=""> Select course:</label></td>
+        
+        
+           <input type="radio" name="coursetype" value="Angular" id="radio1" onclick="myfun(event)"> Angular
+            <input type="radio" name="coursetype" value="Javascript" id="radio2"onclick="myfun(event)"> Javascript
+            <p id="drop"></p>
+
+        <!-- <tr>
+            <td>
+                <select>
+                    <option value="">Select any course type</option>
+                    <option value="">Moring 7:00-8:30AM 20/MAY/2019</option>
+                    <option value="">Evening 7:00-8:30AM 20/MAY/2019</option>
+                   
+                </select>
+            </td>
+        </tr> -->
+ 
+    
+                <br>
+                <button type="button"  class="submit" onclick="save()">Submit</button>
+                <table width=100% class="table">
+<thead>
+                    <tr>
+                        <th>s.no</th>
+                        <th>course title</th>
+                        <th>program timings</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+
+                </tbody>
+                </table>
+            </form>
+
+    <script>
+        function myfun(sai) {
+            var radiobutton = sai.target.value;
+            var select ="";
+           
+            if(radiobutton == 'Angular'){
+                
+                select += '<select  name="program" id="program"><option value="">Select any one option</option><option value="Morning 7:00-8:30AM ('+ radiobutton + ')">Morning 7:00-8:30AM  ('+ radiobutton + ')</option><option value="Evening 6:30-8:00PM ('+ radiobutton + ')">Evening 6:30-8:00PM ('+ radiobutton + ')</option></select>'
+               document.getElementById('drop').innerHTML=select;
+            }
+
+            else{
+                select += '<select  name="program" id="program"><option value="">Select any one option</option><option value="Morning 7:00-8:30AM ('+ radiobutton + ')">Morning 7:00-8:30AM  ('+ radiobutton + ')</option><option value="Evening 6:30-8:00PM ('+ radiobutton + ')">Evening 6:30-8:00PM ('+ radiobutton + ')</option></select>'
+               document.getElementById('drop').innerHTML=select;
+            }
+
+        }
+        var radiobuttonarray=[];
+        function save(){
+            var radioobej ={};
+            radioobej.radiovalue = document.form.coursetype.value;
+            radioobej.selectvalue = document.form.program.value;
+            radiobuttonarray.push(radioobej);
+        //    console.log(radiobuttonarray);
+        getdata();
+        }
+        function getdata(){
+            var arrayLen = radiobuttonarray.length;
+            var trow = "";
+            for(var i=0; i< arrayLen; i++){
+            trow += "<tr>";
+            trow += "<td>"+(i+1)+"</td>";
+            trow += "<td>"+radiobuttonarray[i].radiovalue+"</td>";
+            trow += "<td>"+radiobuttonarray[i].selectvalue+"</td>";
+            trow += "</tr>";
+        }
+        document.getElementById('result').innerHTML=trow;
+            
+
+        }
+    </script>
+</body>
+
+</html>

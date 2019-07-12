@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <!-- <script>
+           var a =10; //  global varaible
+            var b =20; //  global varaible
+            function myadd(){
+                 var c =60; //  local varaible
+                    // c = 60; //  global varaible
+                console.log(a+c);
+            }
+            function mysub(){
+                console.log(a-b);
+                document.write(a-b+"<br/>");
+            }
+            function mymul(){
+                console.log(a*b);
+                document.write(a*b);
+            }
+            function mydiv(){
+                console.log(a/b);
+            }
+            myadd();
+            mysub();
+            mymul();
+            mydiv();
+        </script> -->
+
+        <!-- <script>  
+            function totalelements()  
+            {  
+            var allgenders=document.getElementsByName("gender");  
+            alert("Total Genders:"+allgenders.length);  
+            }  
+            </script>  
+            <form>  
+            Male:<input type="radio" name="gender" value="male">  
+            Female:<input type="radio" name="gender" value="female">  
+              
+            <input type="button" onclick="totalelements()" value="Total Genders">  
+            </form>   -->
+            <script>  
+                function mul(){  
+                var number=document.getElementById("number").value;  
+                alert(number*number);  
+                }  
+                function add(){
+                    var number1=document.getElementById("number1").value;
+                   console.log(number1+number1);
+                }
+                </script>  
+                <form>  
+                    <table>
+                        <tr>
+               <td> Enter No:<input type="text" id="number" name="number"/><br/>  </td>
+               <td> <input type="button" value="multip" onclick="mul()"/> </td>  
+            </tr>
+            <tr>
+                <td> Enter No:<input type="text" id="number1" name="number1"/><br/>  </td>
+                <td> <input type="button" value="added" onclick="add()"/> </td>
+            </tr>
+            </table>
+                </form>  
+
+    </body>
+</html>

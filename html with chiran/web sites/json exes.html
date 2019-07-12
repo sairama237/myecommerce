@@ -1,0 +1,134 @@
+<html>
+    <head>
+            <style>
+                    table, th, td {
+                      border: 3px solid red;
+                    }
+                    </style>
+    </head>
+    <body>
+            <!-- <span style='font-size:80px;'>&#8593;</span>
+            <span style='font-size:80px;'>&#8595;</span> -->
+        <!-- <img src="C:\Users\sai\Desktop\html with chiran\web sites\Up_arrow.png" width='100px', height="50px" alt=""> -->
+        <img src="C:\Users\sai\Desktop\html with chiran\web sites\downarrow.jpg" width='100px', height="50px"alt="">
+        <button type="button" value="uparrow" id="up">
+                <img src="C:\Users\sai\Desktop\html with chiran\web sites\Up_arrow.png"  id="imgu" onclick="mysort()"width='100px', height="50px" alt="">
+        </button>
+        <table width=100%>
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>year</th>
+                    <th>Salary</th>
+                    <th>Having car</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+              
+            </tbody>
+        </table>
+
+
+    <script>
+        var array =[
+            {
+            'sno':1,
+            'name':'sai',
+            'Designation':"ui developer",
+            'year':2019,
+            "salary":45000,
+            "havingcar":false
+            },
+            {
+            'sno':2,
+            'name':'rama',
+            'Designation':"SAP developer",
+            'year':2017,
+            "salary":65000,
+            "havingcar":true
+            },
+            {
+            'sno':3,
+            'name':'shankar',
+            'Designation':"ui developer",
+            'year':2019,
+            "salary":50000,
+            "havingcar":true
+            },
+            {
+            'sno':4,
+            'name':'naresh',
+            'Designation':"ui developer",
+            'year':2019,
+            "salary":60000,
+            "havingcar":true
+            },
+            ];
+        console.log(array);
+var myset = new Set(array);
+myset.add({
+            'sno':5,
+            'name':'aresh',
+            'Designation':"ui developer",
+            'year':2019,
+            "salary":60000,
+            "havingcar":true
+            })
+console.log(myset);
+mytable()
+function mytable(){
+var trow = "";
+for(var data of myset){
+    // if(value =="uparrow")
+    // {}
+    trow += "<tr>"
+    trow +="<td>" + data.sno +"</td>"
+    trow +="<td>" + data.name +"</td>"
+    trow +="<td>" + data.Designation +"</td>"
+    trow +="<td>" + data.year +"</td>"
+    trow +="<td>" + data.salary +"</td>"
+    trow +="<td>" + data.havingcar +"</td>"
+
+}
+
+document.getElementById("result").innerHTML = trow
+
+}
+
+mysort()
+function mysort(){
+
+let mysort = (Array.from(myset).sort((ob1,ob2) =>{
+    return ob1.name > ob2.name ? 1 :ob1.name < ob2.name ? -1:0
+}))
+// console.log(myset);
+if (document.getElementById("up").value == "uparrow"){
+    document.getElementById("up").value ="downarrow"
+    document.getElementById("imgu").src ="C:\Users\sai\Desktop\html with chiran\web sites\Up_arrow.png"
+
+    var trow = "";
+for(var data of mysort){
+    trow += "<tr>"
+    trow +="<td>" + data.sno +"</td>"
+    trow +="<td>" + data.name +"</td>"
+    trow +="<td>" + data.Designation +"</td>"
+    trow +="<td>" + data.year +"</td>"
+    trow +="<td>" + data.salary +"</td>"
+    trow +="<td>" + data.havingcar +"</td>"
+
+}
+document.getElementById("result").innerHTML = trow
+}
+else if (document.getElementById("up").value == "downarrow"){
+    document.getElementById("up").value ="uparrow"
+    document.getElementById("imgu").src ="C:\Users\sai\Desktop\html with chiran\web sites\downarrow.jpg"
+    mytable()
+}
+
+}
+ 
+    </script>
+    </body>
+</html>

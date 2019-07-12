@@ -1,0 +1,27 @@
+div.background{
+background-color:lightpink; 
+background-image:url(https://images.unsplash.com/photo-1483662506105-be14481ce7e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+background-repeat:no-repeat;
+background-size:1500px 250px;
+}
+div.text{
+    text-align:center;
+    margin:20px;
+    border-top:120px;
+    font-family:time new roman;
+    font-size:20pt;
+    font-weight:bold;
+    font-variant:small-caps;
+    color:#c61370;
+    }
+    nav ul{
+        list-style-type:none; /* to delete the dots */
+        
+        }
+        nav ul li
+        {
+        
+        font-size:20pt;
+        display: inline-block;/* display is same line*/
+        color:#cefc02;
+        }

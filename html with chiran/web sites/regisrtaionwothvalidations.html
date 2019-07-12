@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+    <table>
+        <form action="#" name="myform">
+            <tr>
+                <td> <label for=""> name:</label></td>
+                <td> <input type="text" name="name" id="name" required:kundurthi></td>
+                <td><span id="error"></span></td>
+            </tr>
+
+            <tr>
+                <td><label for=""> password:</label></td>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+
+                <td> <label for=""> retry-password:</label></td>
+                <td> <input type="password" name="repass" id="repass"></td>
+            </tr>
+            <tr>
+                <td> <label for="">Emailid:</label></td>
+                <td> <input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="">Age:</label></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td> <label for="">Phone number:</label></td>
+                <td> <input type="text" id="mobile"></td>
+            </tr>
+            <tr>
+                <td><label for=""> gender</label></td>
+                <td> <input type="radio" name="genders" value="genders" id="male" onclick="myFun()">male</td>
+                <td> <input type="radio" name="genders" value="genders" id="female" onclick="myFun()">female</td>
+            </tr>
+            <tr>
+
+                <td><label for=""> hobbies</label></td>
+                <td> <input type="checkbox" id="check">listing music</td>
+                <td> <input type="checkbox" id="check1">photography</td>
+            </tr>
+            <tr>
+                <td> <label for="">Address</label></td>
+                <td> <textarea name="" id="address" cols="25" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Products</label></td>
+                <td>
+                    <select name="" id="dropdown">
+                            <option value=""></option>
+                        <option value="">select option</option>
+                        <option value="">bike</option>
+                        <option value="">car</option>
+                        <option value="">cycle</option>
+                        <option value="">two wheels</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <button type="submit" onclick="myFun()"> submit</button></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function myFun() {
+            var userName = document.myform.name; //document.getelementbyid('name')
+            var password = document.myform.pass;
+            var repassword = document.myform.repass;
+            var radiobutton1 = document.myform.male;
+            var radiobutton2 = document.myform.female;
+            var checkone = document.myform.check;
+            var checktwo = document.myform.check1;
+            var email = document.myform.email;
+            var mob = document.myform.mobile;
+            var dropdown = document.myform.dropdown;
+            // var error = document.getElementById("error");
+
+            if (userName.value == "" || userName.value == null) { //empty fieldname
+                // alert("please enter your name");
+                var error = document.getElementById("error");
+                userName.style.border = "5px solid red"
+                error.textContent = "User name Required";
+                userName.focus();
+                return false;
+            }
+
+            if (userName.value.length < 5 || userName.value.length > 9) {
+                alert("please enter your name in b/w 5 to 9");
+                userName.focus();
+                return false;
+            }
+            if (password.value == "" || password.value == null) {
+                alert("please enter your password");
+                password.focus();
+                return false;
+            }
+            if (password.value != repassword.value) {
+                window.alert("password and retry password should be same");
+                password.focus();
+                return false;
+
+            }
+            if (email.value == "" || email.value == null) {
+                window.alert("please enter valid email");
+                email.focus();
+                return false();
+            }
+            var emails = /^([a-z0-9])+\@([a-z])+\.(com|co.in|live.com)/;
+            if (emails.test(email.value) == false) {
+                alert('Invalid Email Address ->' + emails);
+                email.focus();
+                return false();
+            }
+
+            // var mobPattern = /^([0-9{10}])/; // /^([\d{10}])/;
+            var mobPattern = /^([\d{10}])/;
+            if (mobPattern.test(mob.value)) {
+
+            }
+            else {
+                alert("Invalid number; must be ten digits");
+                mob.focus();
+                return false;
+            }
+
+            if (radiobutton1.checked == "" && radiobutton2.checked == "") {
+                alert("please check your gender");
+                return false;
+            }
+            if (radiobutton1.checked == "male" || radiobutton2.checked == "female") {
+                alert('successfully selected ' + radiobutton1.checked);
+                return false;
+            }
+            if (checkone.checked == "" && checktwo.checked == "") {
+                alert('please check atleast one hobbie');
+                checkone.focus();
+                return false;
+            }
+
+            if (checkone.checked == "listing music" && checktwo.checked == "photography") {
+                alert('successfully selected ' + checkone.checked);
+                checkone.focus();
+                return false;
+            }
+
+            if(dropdown.value==""){
+                alert("Please select an option!");
+                dropdown.focus();
+                return false;
+            }
+             if(dropdown.options[0].text){
+                alert("options in the list"+dropdown);
+            }
+            // if(dropdown.options.length){
+            //     alert("options in the list"+dropdown);
+            // }
+           
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

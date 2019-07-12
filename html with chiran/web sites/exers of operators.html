@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: seashell;
+            }
+            button{
+                background-color: rgb(5, 189, 127);
+                font-size: 30px;  
+                width:80px;
+            }
+            #plus, #nege{
+                color: brown;
+                border-radius: 5px;
+                
+                box-shadow: 6px 6px rgb(209, 209, 129);
+                cursor: pointer;
+                outline: none;
+            }
+            input,label{
+                font-family: cursive;
+                font-size: 30px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <label> Numbers:</label>
+        <input type="text"  id="num" value="7">
+       
+        <button type="submit" id="plus" onclick="myPlus()"> +</button> 
+        
+        <button type="submit" id="nege" onclick="myNeg()"> -</button>
+
+                    <!-- creating the fuctions  -->
+
+        <script>
+            function myPlus(){
+            var a= document.getElementById("num").value;
+            a++;
+                
+            document.getElementById("num").value=a;
+            }
+           
+
+            function myNeg(){
+            var a= document.getElementById("num").value;
+                a--;
+                
+            document.getElementById("num").value=a;
+
+            }
+        </script>
+    </body>
+</html>

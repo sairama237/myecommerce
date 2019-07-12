@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <script>
+                        // frist ways
+            var ar1=Array(3);
+            ar1[0]="chiru";
+            ar1[1]="uday";
+            ar1[2]="sansak";
+
+                         // second ways
+             var ar2=Array("sai","bhanu","joshi");
+
+                            // third ways
+            var ar3=["sai1","bhanu1","vinayakajoshi"];
+                            // fourth ways
+            var ar4=[];
+            ar4[0]="chiru1";
+            ar4[1]="uday1";
+            ar4[2]="sansak1";
+
+                             // five ways
+            var ar5=["sai1","bhanu1","vinayakajoshi",true,403];
+                                // creating fuctions
+                
+            function myDisplay(ary){
+                var n= ary.length;
+                var i;
+               
+                for(i=0;i<n;i++){
+                    console.log(ary[i]);
+                }
+            }
+        </script>
+        <button type="submit" onclick="myDisplay(ar1)">show1</button>
+        <button type="submit" onclick="myDisplay(ar2)">show2</button>
+        <button type="submit" onclick="myDisplay(ar3)">show3</button>
+        <button type="submit" onclick="myDisplay(ar4)">show4</button>
+        <button type="submit" onclick="myDisplay(ar5)">show5</button>
+    </body>
+</html>

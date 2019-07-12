@@ -1,0 +1,98 @@
+<script>
+let myPromises = new Promise((resolve,reject) =>{
+    let a = 3
+    if(a === 3){
+        resolve("sucess")
+    }
+    else{
+        reject("has an error")
+    }
+    })
+    
+    myPromises.then((resultMessage) =>{
+        console.log("this is then:" +resultMessage)
+    
+    }).catch((errorMessage) =>{
+            console.log("this is error:" +errorMessage)
+    })
+
+            // promises.all
+
+const proms = Promise.resolve([1,2,3])
+const promises1 = Promise.resolve([{title:"post one",body:"this is post one"},
+                                    {title:"post two",body:"this is post two"}])
+const promises2 = Promise.resolve("welcome to our world")
+const promises3 =  Promise.resolve(10)
+const promises4 =  Promise.resolve((resolve,reject) =>{
+    setTimeout(function() {
+    return resolve("Hi from promise after timeout");
+  },10000);
+})
+const promises5 = fetch("https://jsonplaceholder.typicode.com/users")
+.then((res) =>res.json())
+
+Promise.all([proms,promises1,promises2,promises3,promises4,promises5]).then((output) => console.log(output))
+
+
+
+
+//       set time out      
+var p = new Promise(function(resolve,reject) {
+  setTimeout(function() {
+    return resolve("Hi from promise after timeout");
+  },5000);
+});
+p.then(function(msg) {
+  console.log(msg);
+})
+.catch(function(error) {
+  console.error(error);
+});
+
+
+
+// fetch api using promises usung genernal syntax
+// var promise1 = promiseTRSANSG(3);
+// promise1.then(function(result) {
+//   console.log(result);
+// });
+// promise1.catch(function(reason) {
+//   console.log(reason);
+// });
+// // result = await promiseTRSANSG(3);
+// // console.log(result);
+// async function testAsync() {
+//   for (var i = 0; i < 5; i++) {
+//     try {
+//       result1 = await promiseTRRARNOSG();
+//       console.log("Result 1 ", result1);
+//       result2 = await promiseTRRARNOSG();
+//       console.log("Result 2 ", result2);
+//     } catch (e) {
+//       console.log("Error", e);
+//     } finally {
+//       console.log("This is done");
+//     }
+//   }
+// }
+// testAsync();
+//fetch api using promises using no need to catch,try
+async function fetchUsers(){
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const data = res.json()
+    // document.write(data.userId)
+    console.log(data)
+}
+fetchUsers()
+
+
+async function fun1(req, res){
+  let response = await request.get("https://jsonplaceholder.typicode.com/posts");
+    if (response.err) { 
+        console.log('error');
+    }
+    else { 
+        console.log('fetched response');
+}
+}
+</script>

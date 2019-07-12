@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            #input{
+                color: brown;
+            }
+            #pass{
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+<!-- <h2 >0</h2> -->
+<h2 id="input">0</h2>
+<button type="button"  id="start" >start time</button>
+<button type="button" id="pass" >pass time</button>
+    </body>
+    <!-- <script>
+        function mysettimeout(){
+            setTimeout(
+               function(){
+                   alert("welcome to our site");
+               },5000);
+        }
+    </script> -->
+<script>
+const input = document.getElementById("input");
+const start = document.getElementById("start");
+const pass = document.getElementById("pass");
+let count =0;
+let passed;
+start.addEventListener("click",function(){
+     passed = setInterval(function(){
+       count += 1;
+       input.textContent = count
+    },1000);
+    // console.log(passed);
+});
+pass.addEventListener("click",function(){
+clearInterval(passed);
+})
+
+</script>
+</html>

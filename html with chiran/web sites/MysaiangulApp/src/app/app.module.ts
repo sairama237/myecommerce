@@ -29,7 +29,10 @@ import { ParentComponent } from './parent/parent.component';
 import { ImageswithapiComponent } from './imageswithapi/imageswithapi.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { ModeldrivenregComponent } from './modeldrivenreg/modeldrivenreg.component';
-import { TestmethodComponent } from './testmethod/testmethod.component';
+import { MoiveComponent } from './moive/moive.component';
+import { MoviedetailslistComponent } from './moviedetailslist/moviedetailslist.component';
+import { CustomroutingModule } from './customrouting/customrouting.module';
+import { MainnavComponent } from './mainnav/mainnav.component';
 
 @NgModule({
   declarations: [
@@ -59,10 +62,12 @@ import { TestmethodComponent } from './testmethod/testmethod.component';
     ImageswithapiComponent,
     ReactiveformsComponent,
     ModeldrivenregComponent,
-    TestmethodComponent,
+    MoiveComponent,
+    MoviedetailslistComponent,
+    MainnavComponent,
   ],
   imports: [
-    BrowserModule,FormsModule, HttpClientModule,ReactiveFormsModule,RouterModule,RoutingmoduleModule
+    BrowserModule,FormsModule, HttpClientModule,ReactiveFormsModule,RouterModule,RoutingmoduleModule,CustomroutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

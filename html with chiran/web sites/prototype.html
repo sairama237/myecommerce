@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // this is normal way using constucor 
+        function Employee(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+        var emp1 = new Employee("uday", 45, 15000);
+        var emp2 = new Employee("sai", 27, 45000);
+        console.log(emp1.name);
+        document.write("nameis->" + emp1.name + "<br>ageis->" + emp1.age + "<br>salaryis->" + emp1.salary);
+        document.write("<br>nameis->" + emp2.name + "<br>ageis->" + emp2.age + "<br>salaryis->" + emp2.salary);
+
+
+        // adding prototype to properties here "bonus" is adding propertie for an existing function
+        function Employee(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+        var emp1 = new Employee("uday", 45, 15000);
+        var emp2 = new Employee("sai", 27, 45000);
+        var a = 5000;
+        var res = parseInt(a) + parseInt(emp2.salary);
+        Employee.prototype.bonus = res;
+
+        console.log(emp2.name);
+        document.write("<br>nameis->" + emp1.name + "<br>ageis->" + emp1.age + "<br>salaryis->" + emp1.salary);
+        document.write("<br>nameis->" + emp2.name + "<br>ageis->" + emp2.age + "<br>salaryis->" + emp2.bonus);
+
+        // adding prototype to method\function here "bonus" is adding propertie for an existing function
+        function sai(fristname, middlename, lastname) {
+            this.fristname = fristname;
+            this.middlename = middlename;
+            this.lastname = lastname;
+
+            getdetails = function () {
+                return this.fristname + "" + this.middlename;
+            }
+        }
+        var emp3 = new sai("kundurthi", "ramalingeswara", "sai");
+        sai.prototype.getdetails = function () {
+            return this.fristname + "" + this.middlename + "" + this.lastname;
+        }
+        console.log(emp3.getdetails());
+
+    </script>
+</body>
+
+</html>

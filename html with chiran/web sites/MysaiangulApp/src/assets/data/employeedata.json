@@ -1,0 +1,64 @@
+[
+    {
+      "empid": 1,
+      "empname": "sai",
+      "empdesignation":"SAP ABAP Developer",
+      "empsalary":60000,
+      "emphavingcar":true,
+      "empaddress":"hudacomplex"
+    },
+    {
+        "empid": 2,
+        "empname": "rama",
+        "empdesignation":"web Developer",
+        "empsalary":65000,
+        "emphavingcar":true,
+        "empaddress":"saroornagar"
+      
+    },
+    {
+        "empid": 3,
+        "empname": "gowri",
+        "empdesignation":"informatica Developer",
+        "empsalary":60000,
+        "emphavingcar":false,
+        "empaddress":"miyapur"
+      
+    },
+    {
+        "empid": 4,
+        "empname": "teja",
+        "empdesignation":"SAP Basics admin",
+        "empsalary":60000,
+        "emphavingcar":true,
+        "empaddress":"malikargiri"
+      
+    },
+    {
+        "empid": 5,
+        "empname": "shankar",
+        "empdesignation":"web Developer",
+        "empsalary":60000,
+        "emphavingcar":true,
+        "empaddress":"hudacomplex"
+      
+    },
+    {
+        "empid": 6,
+        "empname": "naresh",
+        "empdesignation":"web Developer",
+        "empsalary":60000,
+        "emphavingcar":true,
+        "empaddress":"filmnagar"
+      
+    },
+    {
+        "empid": 7,
+        "empname": "satish",
+        "empdesignation":"web Developer",
+        "empsalary":66000,
+        "emphavingcar":true,
+        "empaddress":"madhapur"
+      
+    }
+]

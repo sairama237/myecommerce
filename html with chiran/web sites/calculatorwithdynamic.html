@@ -1,0 +1,158 @@
+<html>
+   <head>
+       <title>calculator </title>
+       <style>
+           body{
+               background-color: whitesmoke;
+               margin: 30px;
+               padding: 30px;
+           }
+           legend{
+               text-align: center;
+               background-color: brown;
+               color: whitesmoke;
+               font-family: cursive;
+               font-size: 25px;
+               text-transform:uppercase;
+           }
+           table{
+               background-color: rgb(230, 230, 132);
+               line-height: 80px;
+           }
+           td{
+               font-size: 23px;
+               font-family: 'Times New Roman', Times, serif;
+               font-weight: bold;
+               text-transform:capitalize;
+               color:red;
+           }
+           input{
+            height: 30px;
+                border-radius: 10px;
+                 outline: none;      /*  to avoid blue box */
+                 width: 150px;
+           }
+           #res{
+               background-color: rgb(224, 67, 67);
+               color: white;
+               font-size: 25px;
+
+           }
+           .myaction{
+               background-color:chocolate;
+               font-family: 'Times New Roman', Times, serif;
+               font-size: 23px;
+               font-weight: bold;
+               text-transform: capitalize;
+               border-radius: 10px;
+               padding: 10px;
+               cursor: pointer;
+           }
+           .myaction:focus, .myaction1:focus{
+               background:linear-gradient(blue,yellow);
+               border-radius: 10px;
+               outline: none;
+               box-shadow: 5px 5px red;
+               
+           }
+           .myaction1{
+                background-color:rgb(87, 210, 30);
+               font-family: 'Times New Roman', Times, serif;
+               font-size: 23px;
+               font-weight: bold;
+               text-transform: capitalize;
+               border-radius: 10px;
+               padding: 10px;
+               outline: none;
+               cursor: pointer;
+               
+           }
+       </style>
+   </head>
+        
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>calculator application</legend>
+    <table width=80%>
+        <tr>
+            <td> First number </td>
+            <td><input type="text" id="frist" > </td>
+        </tr>
+        <tr>
+            <td> Second number</td>
+            <td><input type="text" id="second" > </td>
+        </tr>
+        <tr>
+            <td> <div >Result : <span id="res"></span></div> </td>
+       </tr>
+        <tr>
+            <td> <button type="submit" onclick="add()" class="myaction"> addition</button> </td>
+            <td> <button type="submit" onclick="sub()"class="myaction1"> subraction</button> </td>
+            <td> <button type="submit" onclick="mul()"class="myaction1"> multiplication</button> </td>
+            <td> <button type="submit" onclick="div()"class="myaction"> division</button> </td>
+            <td> <button type="submit" onclick="perc()"class="myaction"> percetage</button> </td>
+            
+        </tr>    
+</table>
+</fieldset>
+</form>
+<script>
+    // var a= 10;
+    // var b= 20;
+
+    function add(){
+    var one = document.getElementById("frist").value;
+    var sec = document.getElementById("second").value;
+       
+   // console.log(parseInt(one)+parseInt(sec));
+     // document.getElementById("res").value = parseInt(one)+parseInt(sec);
+     var re1=parseInt(one)+parseInt(sec);
+      document.getElementById("res").innerHTML = re1
+
+    
+                        // checking conidtions of addtion
+    // if(re1 == 70){
+    //  console.log("result is successfull");
+    // }
+    //   else{
+    //   document.write("result is unsuccessfull");
+    //   }
+    }
+    
+
+    function sub(){
+    var one = document.getElementById("frist").value;
+    var sec = document.getElementById("second").value;
+       
+    //  document.getElementById("res").value = parseInt(one)+parseInt(sec);
+      document.getElementById("res").innerHTML = parseInt(one)-parseInt(sec);
+    }
+
+    function mul(){
+    var one = document.getElementById("frist").value;
+    var sec = document.getElementById("second").value;
+       
+    //  document.getElementById("res").value = parseInt(one)+parseInt(sec);
+      document.getElementById("res").innerHTML = parseInt(one)*parseInt(sec);
+    }
+ 
+    function div(){
+    var one = document.getElementById("frist").value;
+    var sec = document.getElementById("second").value;
+       
+    //  document.getElementById("res").value = parseInt(one)+parseInt(sec);
+      document.getElementById("res").innerHTML = parseInt(one)/parseInt(sec);
+    }
+     
+     function perc(){
+         var one = document.getElementById("frist").value;
+         var sec = document.getElementById("second").value;
+         var re = Number(one) % Number(sec);
+         document.getElementById("res").innerHTML=re;
+     }
+    
+
+</script>
+</body>
+</html>

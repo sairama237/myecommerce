@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+          
+            .mypic{
+               border-radius: 25px;
+
+
+            }
+            .mytext1{
+                background-color:lightblue;
+                border: 10px;
+                padding: 25px;
+                color: brown;
+                font-family: cursive;
+                font-size: 25px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <table>
+            <tr>
+
+       <td> <label>movie show details</label> </td>
+            </tr>
+            <tr>
+    <td>  <input type="text" id="movie"> </td>
+            </tr>
+            <tr>
+     <td>  <button type="submit" onclick="myDetails()">Get Show Details</button></td>
+        <td>  <button type="submit" onclick="myReset()">Reset</button></td>
+    </tr>
+    </table>
+<div>
+    <span id="res">
+        
+    </span>
+</div>
+    <script>
+        function myDetails(){
+            var a = document.getElementById("movie").value;
+            var oup;
+        
+            switch(a){
+         case 'chiralahari':
+        oup="<div class='mytext1'> <br> movie name:"+a +"</br>"
+              +"<br>theatre name:gokul </br>"
+              +"<br>show timings:6pm </br>"
+              +"<br>location area:kothapet</br>"
+               +"<img src='C:/Users/sai/Desktop/html with chiran/web sites/Chitralahari_Movie.jpg'class='mypic'> </div>"
+         document.getElementById("res").innerHTML=oup;
+        break;
+         case 'maharshi':
+         oup="<div class='mytext1'> <br> movie name:"+a +"</br>"
+              +"<br>theatre name:inox </br>"
+              +"<br>show timings: 9pm </br>"
+              +"<br>location area:kothapet</br>"
+               +"<img src='C:/Users/sai/Desktop/html with chiran/web sites/Mahesh_Babu_Maharshi_poster.jpg'class='mypic'> </div>"
+         document.getElementById("res").innerHTML=oup;
+        break;
+        default:
+        document.getElementById("res").innerHTML="<div class='mytext1'> <br>Please give the moive name";
+    }
+            }
+
+    // function myReset(){
+    //     var a = document.getElementById("movie").value="clr"
+    // }
+        
+    </script>
+    </body>
+</html>

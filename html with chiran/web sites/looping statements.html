@@ -1,0 +1,100 @@
+<body>
+    
+<script>
+                        // if statement  example with same data type 
+    var class1="JAVA";
+
+    if(class1=="JAVA"){
+        document.write("<br> java class </br>");
+    }
+    else if(class1==".net")
+    {
+        document.write(" .net class ");
+    }
+    else{
+        document.write(" no class ");
+    }
+                    // if statement  example with different data type 
+
+    var class1=53;
+    var class2 = 52;
+
+if(class1==="53"){
+    document.write(" given range ");
+}
+else if(class2=="52")
+{
+    document.write("<br> notrange </br>");
+}
+else{
+    document.write(" not is given range ");
+}
+
+                    // switch statements
+    var grade ='B';
+    switch(grade){
+        case 'A':document.write("distrution");
+        break;
+        case 'B':document.write("<br>frist class</br>");
+        break;
+        case 'C':document.write("second class");
+        break;
+        default:document.write("your not available");
+    }
+    
+
+                        // FOR LOOP STA
+        var count;
+        for(count=0;count<10;count++){
+            document.write("current count is:"+count);
+            document.write("</br>")
+        }
+
+                             // while loop    
+document.write("while loop");
+document.write("</br>");
+var sai =10;
+while(sai>1){
+    document.write("count is: "+sai + "</br>" );
+    sai--;
+}
+                             //  do while loop   
+document.write(" do while loop");
+document.write("</br>");
+var count1 = 0;
+do{
+    document.write("current count:"+count1+ "</br>");
+    count1++;
+}
+while(count1<6);
+                        //   break and contius while loop
+document.write("contius statement with while");
+document.write("</br>");
+
+var chiru = 0;
+while(chiru<15)
+{
+    chiru++;
+    if(chiru==5){
+        continue;
+    }
+    document.write(chiru + "</br>");
+    
+}
+
+                        //   break  while loop
+document.write(" break statement with while");
+document.write("</br>");
+
+var chiru = 0;
+while(chiru<15)
+{
+    chiru++;
+    if(chiru==5){
+        break;
+    }
+    document.write(chiru + "</br>");
+    
+}
+</script>
+</body>

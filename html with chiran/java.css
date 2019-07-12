@@ -1,0 +1,21 @@
+div.background
+{
+background-image:url(https://media.geeksforgeeks.org/wp-content/cdn-uploads/Java-1024x341.png);
+background-repeat:no-repeat;
+background-size: 1200px 200px;
+border: 8px solid red;
+
+margin: 30px;
+
+}
+
+div.text
+{
+    color:#c3f804; 
+        font-size:20pt;
+        padding: 30px;
+    font-weight: bold;
+}
+img{
+    opacity: 0.5;
+}

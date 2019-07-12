@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <script>
+                            // using constructor
+
+            function myConst(id,name,salary){
+                this.id=id;
+                this.name =name;
+                this.salary=salary;
+            }
+            var emp1 = new myConst(101,"sai",50000);
+            var emp2 = new myConst(102,"ramalingwara rao",60000);
+            console.log(emp1.id+" "+emp1.name+" "+emp1.salary);"</br>"
+            console.log(emp2['id']+" "+emp2.name+" "+emp2['salary']);
+
+                            //using object.create
+            var person={age:54,name:'sasank',dept:'ui'};
+            var person1= Object.create(person);
+            person1.id=125;
+            console.log(person.age);//54
+            console.log(person.name);//sasank
+            console.log(person1.age);//54
+            console.log(person.dept);//ui
+            console.log(person.id);//undefined
+
+                            //using object.assign
+            var person={age:54,name:'sasank',dept:'ui'};
+            var person1= Object.assign(person);
+            person1.id=125;
+            console.log(person.age);//54
+            console.log(person.name);//sasank
+            console.log(person1.age);//54
+            console.log(person.dept);//ui
+            console.log(person.id);//125
+        </script>
+    </body>
+</html>

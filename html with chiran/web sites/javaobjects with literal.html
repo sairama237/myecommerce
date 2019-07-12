@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <script>
+                                // simple java object
+            var car;
+              car ={name:"fiat",model:500,weight:800};
+            console.log(car.weight+"  "+car.model+"  "+car.name); // dot notation
+            console.log(car['weight']+"  "+car['model']+"  "+car['name']); // braket notation
+
+                                // BY USING Object LITERAL 
+            var emp;
+            emp={id:101,name:'sai',salary:5000,dept:'angular js'};
+            console.log(emp.id+" "+emp.name+" "+emp.salary+" " +emp.dept+" ");
+            console.log(emp['id']+" "+emp['name']+" "+emp['salary']+" " +emp['dept']+" ");
+            console.log(delete emp.id);
+            console.log(emp['id']+" "+emp['name']+" "+emp['salary']+" " +emp['dept']+" ");
+            emp={id:102,name:'sai',salary:5000,dept:'angular js'};
+            console.log(emp['id']+" "+emp['name']+" "+emp['salary']+" " +emp['dept']+" ");
+
+
+                            // real time example using literal type
+            var customer;
+            customer={fristname:'uday',lastname:'chiru',age:25,
+            fullname:function(){
+                console.log(this.fristname+" "+this.lastname);
+                },
+                address:{
+                    street:'sujathanagar',
+                    city:'vizay',
+                    pincode:523001
+                }
+                };
+
+        // document.write(customer.fullname());
+       
+        document.write(customer.fristname+" "+customer.lastname+" "+customer.age+" "+"<br>");
+        console.log(customer.address.street);
+        document.write(customer.address.city+" "+customer.address.pincode+" "+customer.address.street+"" +"<br>");
+        console.log(customer.address['city']);//bracket notation
+        console.log(customer.address.pincode);
+
+                        // acessing obj using for-in 
+    var car={make:"toyota",model:"commy",weights:600,ineng:"tokifgujg"};
+    
+    // console.log(car.make+"");// this normal way
+    
+for(var sai in car){
+    console.log(sai+":"+car[sai]);
+}
+
+        </script>
+    </body>
+</html>

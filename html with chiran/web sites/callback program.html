@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+        </style>
+
+    <script>
+        function myMain(a,b,callback){
+            alert("Sum:"+(a+b));
+            callback(a,b);
+        }
+
+        function myDiff(p,q){
+            alert("Diff:"+(p-q));
+        }
+
+        function myMul(m,n){
+            alert("mul:"+(m*n));
+        }
+
+    </script>
+    </head>
+    <body>
+        <button onclick="myMain(20,30,myDiff)">show1</button>
+        <button onclick="myMain(82,25,myMul)">show2</button>
+        <button onclick="myMain(59,37,function mydiv(x,y){alert((x/y))})">show3</button>
+    </body>
+</html>

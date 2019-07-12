@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+    <script>
+        var i = 0;
+        var image = [];
+        var time = 3000;
+        image[0] = 'C:/Users/sai/Desktop/img1.jpg';
+        image[1] = 'C:/Users/sai/Desktop/img2.jpg';
+
+        // myImges()
+        function myImges() {
+            document.slide.src = image[i];
+
+          if (i<image.length-1){
+            i++
+          }
+          else{
+              i = 0;
+          }
+            setTimeout("myImges()", time);
+        }
+        window.onload = myImges;
+    </script>
+</head>
+
+<body>
+    <img name="slide" width="400" height="500" alt="notopended">
+</body>
+
+
+</html>

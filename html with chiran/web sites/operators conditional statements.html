@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+                            <!-- ternary operators -->
+
+         <input type="text" id="age1"  >
+        <button type="submit" onclick="myage()"> click me </button>
+        <p id="agemar"></p>
+        <script>
+            function myage(){
+                var age, marraige;
+                age= document.getElementById("age1").value;
+                marraige = (age < 25)? "too young": "old enough";
+                document.getElementById("agemar").innerHTML=marraige;
+                // Console.log(age);
+            }
+        </script> 
+                        <!-- arithmetic operators with +,-,*,/,%,++,--, -->
+
+<input type="text" id="adi"  >
+<input type="text" id="adit"  >
+<button type="submit" onclick="add()"> click me </button>
+<p id="agemar"></p>
+<script>
+    function add(){
+        var a, b
+        a = document.getElementById("adi").value;
+        b= document.getElementById("adit").value;
+
+        document.getElementById("agemar").innerHTML=Number(a)+Number(b);
+        // Console.log(age);
+    }
+</script> 
+
+                    <!-- comparsion operators -->
+<!-- <input type="text" id="com">
+<button type="submit" onclick="myfunc()"> click me</button>
+<label> result is</label>
+<input type="text" id="out">
+<script>
+function myfunc(){
+    var a = document.getElementById("com").value;
+     var b= document.getElementById("comp").value;
+if(a==20){
+    document.getElementById("out").value;
+}
+else{
+
+}
+} -->
+</script>
+    </body>
+</html>

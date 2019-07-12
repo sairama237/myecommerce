@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to open a new window and close the window after three seconds (3000 milliseconds)</p>
+
+<button onclick="openWin()">Open "myWindow"</button>
+
+<script>
+function openWin() {
+  var myWindow = window.open("", "myWindow", "width=1000, height=100");
+  myWindow.document.src ="C:\Users\sai\Desktop\saiimage.png" ,"width=100, height=100";
+  setTimeout(function(){ myWindow.close() }, 6000);
+}
+
+</script>
+
+</body>
+</html>

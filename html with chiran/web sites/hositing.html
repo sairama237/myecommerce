@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+                            //  variable normal declare
+            var a;
+            a=5;
+            document.write("variable normal declare" + "</br>");
+            document.write("result:"+a+ "</br>");
+                                   //  variable hoisting declare
+            a=5;
+            document.write("variable hoisting declare" + "</br>");
+            document.write("result:"+a+ "</br>");
+            var a;
+
+                                // function normal declare
+            document.write("function normal declare with two parameters" + "</br>");
+            function myAdd(first,second){
+             var sum= first+second;
+             return sum;
+            }
+            var result=myAdd(10,60);
+            document.write("Result is:"+result+ "</br>");
+                            // function hoisting declare
+            document.write("frist calling fun then after delcar fun " + "</br>")
+            var result=myAdd(10,50);
+            document.write("Result is:"+result + "</br>");
+            function myAdd(first,second){
+             var sum= first+second;
+             return sum;
+            }
+
+
+        </script>
+    </body>
+</html>
