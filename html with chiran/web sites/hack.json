@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "batman",
+      "author": "saisd"
+    },
+    {
+      "id": "3",
+      "title": "orange",
+      "author": "saisd"
+    },
+    {
+      "id": "4",
+      "title": "anji",
+      "author": "sai"
+    },
+    {
+      "id": "5",
+      "title": "tupaki",
+      "author": "saisd"
+    },
+    {
+      "id": "6",
+      "title": "tupaki",
+      "author": "naresh"
+    },
+    {
+      "id": "3yLPoDP"
+    },
+    {
+      "id": "2gElriS"
+    },
+    {
+      "title": "sao",
+      "author": "saiss",
+      "id": "1lqhhnN"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

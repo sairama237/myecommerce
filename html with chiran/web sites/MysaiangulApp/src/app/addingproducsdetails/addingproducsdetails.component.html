@@ -1,0 +1,42 @@
+<p>
+  addingproducsdetails works!
+</p>
+<div class="emp-form">
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input placeholder="Firts Name" class="form-control" [(ngModel)]="serivces.currentEmployee.firstName">
+      </div>
+      <div class="col-md-6 form-group">
+        <input placeholder="Last Name" class="form-control" [(ngModel)]="serivces.currentEmployee.lastName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input placeholder="Employee Code" class="form-control" [(ngModel)]="serivces.currentEmployee.code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input placeholder="Address" class="form-control" [(ngModel)]="serivces.currentEmployee.address">
+      </div>
+      <div class="col-md-6 form-group">
+        <input placeholder="Contact Number" class="form-control" [(ngModel)]="serivces.currentEmployee.contactNumber">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <button class="btn btn-success btn-lg btn-block" (click)="createEmployee(serivces.currentEmployee)">
+          <i class="fa fa-save"></i>
+          SAVE
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary btn-lg btn-block" (click)="clearEmployee(serivces.currentEmployee)">
+          <i class="fa fa-retweet"></i>
+          CLEAR
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="" (click)="goback()">Back to products</a> -->

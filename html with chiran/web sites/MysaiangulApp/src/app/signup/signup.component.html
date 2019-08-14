@@ -1,3 +1,69 @@
 <p>
   signup works!
 </p>
+<div class="container-fluid">
+  <form #userdata ="ngForm" (ngSubmit)="onSubmit(userdata.value)">
+      <div class="row">
+          <div class="col s6">
+      <label for="">First name</label>
+    <input type="text" name="firstname" ngModel >
+    </div>
+    <div class="col s6">
+        <label for="">last name</label>
+      <input type="text" name="lastname" ngModel >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+  <label for=""> UserName</label>
+<input type="text" name="username" ngModel >
+</div>
+<div class="col s6">
+    <label for="">PassWord</label>
+  <input type="password" name="password" ngModel >
+  </div>
+</div>
+<div class="row">
+    <div class="col s6">
+<label for="">Retry-Password</label>
+<input type="password" name="Retry-Password" ngModel >
+</div>
+<div class="col s6">
+  <label for="">Email id</label>
+<input type="email" name="email" ngModel >
+</div>
+</div>
+<div class="row">
+    <div class="col s6">
+<!-- <label for="">products</label>
+
+<input type="checkbox" name="Red" ngModel /><span> Red </span>
+        <input type="checkbox" name="Red" ngModel/><span>Yellow</span> -->
+        <label for="">products</label>  
+            <label>
+              <input type="checkbox" name="products" ngModel />
+              <span>Red</span>
+            </label>
+            <label>
+                <input type="checkbox" name="products" ngModel/>
+                <span>Yellow</span>
+              </label>
+              <label>
+                  <input type="checkbox" name="products" ngModel />
+                  <span>White</span>
+                </label>
+</div>
+<div class="col s6">
+  <label for="">Gender</label>
+  <label>
+<input type="radio"  class="with-gap" name="gender" value="Male"  ngModel ><span>Male</span> 
+</label>
+<label>
+<input type="radio"  class="with-gap" name="gender" value="Female" ngModel ><span>FeMale</span> 
+</label>
+</div>
+</div>
+<button type="submit" class="btn-info" >Submit</button>
+</form>
+</div>
+

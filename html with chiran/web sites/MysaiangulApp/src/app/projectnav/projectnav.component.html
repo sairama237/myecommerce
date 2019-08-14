@@ -1,0 +1,46 @@
+<div class=" container-fluid myhead1">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="assets/best-logo-design-48.jpg" alt="" width="60px">
+    </div>
+    <div class="col-md-10">
+      {{myText}}
+    </div>
+  </div>
+
+</div>
+<nav class="navbar navbar-tab">
+  <div class="container-fluid ">
+      <div class="dropdown">
+          <button type="submit" class="btn-danger dropdown-toggle" data-toggle="dropdown">Pageslist</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/Home">Home </a>
+            <a class="dropdown-item" routerLink="/about">about</a>
+            <a class="dropdown-item" routerLink="/contact">contact</a>
+            <a class="dropdown-item" routerLink="/user">Signin/Signup</a>
+          </div>
+        </div>
+    <div class="navbar-header ">
+      <img src="../assets/ecom.jpg" alt="" width="50px">
+    </div>
+    <ul class="">
+
+      <li><a routerLink="/Home">Home </a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    
+      <li>
+
+      </li>
+      <li><a routerLink="/productsdata">Product</a></li>
+      
+      <li><a routerLink="/mens">Mens</a></li>
+      <li><a routerLink="/womens">Women</a></li>
+      <li>
+      <button type="submit" (click)="logout()">Logout</button>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

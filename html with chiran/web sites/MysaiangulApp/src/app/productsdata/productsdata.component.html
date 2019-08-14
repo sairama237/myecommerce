@@ -1,0 +1,37 @@
+<!-- <a routerLink="/addingproducts">Add Product</a> -->
+<p>
+  productsdata works!
+</p>
+<table class="table table-bordered">
+  <thead>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Code</th>
+    <th>ContactNumber</th>
+    <th>Address</th>
+    <th>Delete</th>
+    <th>Update</th>
+ 
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of myemployee">
+      <td>{{emp.firstName}}</td>
+      <td>{{emp.lastName}}</td>
+      <td>{{emp.code}}</td>
+      <td>{{emp.contactNumber}}</td>
+      <td>{{emp.address}}</td>
+     
+      <td>
+        <a class="btn text-danger" >
+          <i class="fa fa-trash"></i>
+        </a>
+      </td>
+      <td>
+        <a class="btn" (click)="editEmployee(emp)" >
+          <i class="fa fa-edit"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+   <app-addingproducsdetails></app-addingproducsdetails>

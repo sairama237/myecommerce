@@ -31,9 +31,11 @@ public movieTypes = [
   onSubmit(data){
     // console.log(data)
     this.mycon.getmovies(data)
-.subscribe(result => this.myMovies =result)
+.subscribe(result => this.myMovies = [result])
   }
-  // viewFullPage(data){
-  //   this.router.navigate(['/moviedetails',data.Title,data.Year,data.Type])
-  // }
+  viewFullPage(data){
+    console.log(data)
+    this.router.navigate(['/posterDetails',data.Title,data.Year,data.Type])
+   
+  }
 }

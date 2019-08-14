@@ -11,8 +11,8 @@ export class ParentComponent implements OnInit {
   constructor(private mycompent:MyserviceempService) { }
 
   ngOnInit() {
-    this.mycompent.getEmployee()
-    .subscribe(resu => this.myparen = resu)
+    // this.mycompent.getEmployee()
+    // .subscribe(resu => this.myparen = resu)
    
   }
 

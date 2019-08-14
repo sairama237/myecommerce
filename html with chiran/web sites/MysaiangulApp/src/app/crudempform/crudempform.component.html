@@ -1,0 +1,22 @@
+<p>
+  crudempform works!
+</p>
+<div class="jumbortron">
+  <form #employedata = "ngForm" (ngSubmit) = "onEmpdata(employedata.value)">
+      <div class="form-group">
+          <label for="">Id</label>
+          <input type="text" class="form-control" name="id" [(ngModel)]="employee.id">
+        </div>
+      <div class="form-group">
+          <label for="">title</label>
+          <input type="text" class="form-control" placeholder="title" name="title" [(ngModel)]="employee.title">
+        </div>
+        <div class="form-group">
+            <label for="">author</label>
+            <input type="text" class="form-control" placeholder="author" name="author" [(ngModel)]="employee.author">
+          </div>
+         
+        <button  type="submit">Submit</button>
+  </form>
+  
+</div>

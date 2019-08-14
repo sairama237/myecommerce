@@ -1,0 +1,29 @@
+<p>
+  crudemplistdata works!
+</p>
+
+
+<table class="table table-bordered">
+  <thead>
+
+    <th>id</th>
+    <th>title</th>
+    <th>author</th>
+   
+    <th>Actions for crud</th>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of myemployeedata">
+      <td>{{employee.id}}</td>
+      <td>{{employee.title}}</td>
+      <td>{{employee.author}}</td>
+
+      <td>
+        <button type="submit" class="btn-info"(click)="update(employee.id)">Update</button>
+        <hr>
+        <button type="submit" class="btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

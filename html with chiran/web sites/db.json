@@ -1,0 +1,36 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "firstName": "Sham",
+      "lastName": "Varma",
+      "contactNumber": 9845781256,
+      "code": "emp-001",
+      "address": "Pune"
+    },
+    {
+      "id": 2,
+      "firstName": "sai",
+      "lastName": "kumar",
+      "contactNumber": 9421657854,
+      "code": "emp-002",
+      "address": "Mumbai"
+    },
+    {
+      "id": 3,
+      "firstName": "Ravi kumar",
+      "lastName": "Sharma",
+      "contactNumber": 9132451202,
+      "code": "emp-003",
+      "address": "Delhi"
+    },
+    {
+      "id": 4,
+      "firstName": "kundurthi",
+      "lastName": "rama",
+      "code": "emp-23",
+      "contactNumber": "96423369963",
+      "address": "huda complex"
+    }
+  ]
+}
