@@ -10,6 +10,7 @@ export class UserdataComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

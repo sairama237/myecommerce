@@ -49,6 +49,7 @@ import { AddingproducsdetailsComponent } from './addingproducsdetails/addingprod
 import { MensdetailsComponent } from './mensdetails/mensdetails.component';
 import { WomensdetailsComponent } from './womensdetails/womensdetails.component';
 import { MensdetailslistComponent } from './mensdetailslist/mensdetailslist.component';
+import { CustomdireDirective } from './customdire.directive';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { MensdetailslistComponent } from './mensdetailslist/mensdetailslist.comp
     MensdetailsComponent,
     WomensdetailsComponent,
     MensdetailslistComponent,
+    CustomdireDirective,
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,ReactiveFormsModule,

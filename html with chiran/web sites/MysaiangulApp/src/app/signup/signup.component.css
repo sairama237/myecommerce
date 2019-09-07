@@ -1,0 +1,18 @@
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color:burlywood
+    
+}
+input.ng-invalid{
+    border-left: 2px solid red
+}
+input.ng-valid{
+    border-left: 2px solid gray
+}
+.myclass{
+    color: brown;
+    font-size: 20px;
+    font-family: cursive
+}

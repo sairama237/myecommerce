@@ -1,9 +1,9 @@
-<!-- <a routerLink="/addingproducts">Add Product</a> -->
+<a routerLink="/addingproducts">Add Product</a>
 <p>
   productsdata works!
 </p>
 <table class="table table-bordered">
-  <thead>
+  <thead *ngIf="myemployee.length>0">
     <th>FirstName</th>
     <th>LastName</th>
     <th>Code</th>
@@ -19,10 +19,10 @@
       <td>{{emp.lastName}}</td>
       <td>{{emp.code}}</td>
       <td>{{emp.contactNumber}}</td>
-      <td>{{emp.address}}</td>
+      <td>{{emp.address |uppercase}}</td>
      
       <td>
-        <a class="btn text-danger" >
+        <a class="btn text-danger"(click)="deleteEmployee(emp.id)" >
           <i class="fa fa-trash"></i>
         </a>
       </td>
@@ -34,4 +34,6 @@
     </tr>
   </tbody>
   </table>
-   <app-addingproducsdetails></app-addingproducsdetails>
+  <h3 appCustomdire  *ngIf="isdeleted">{{deletedata}}</h3> 
+  
+   <!-- <app-addingproducsdetails></app-addingproducsdetails> -->

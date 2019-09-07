@@ -1,7 +1,7 @@
-<p>
-  addingproducsdetails works!
+<p class=" color red text center btn-lg btn-danger" >
+  Products forms
 </p>
-<div class="emp-form">
+<div class="emp-form container-fluid">
     <div class="row">
       <div class="col-md-6 form-group">
         <input placeholder="Firts Name" class="form-control" [(ngModel)]="serivces.currentEmployee.firstName">
@@ -38,5 +38,6 @@
       </div>
     </div>
   </div>
+  <h3 appCustomdire *ngIf="isAdded" >{{confirmationstring}}</h3>
 
-  <!-- <a href="" (click)="goback()">Back to products</a> -->
+  <a routerLink="/productsdata" >Back to products</a>

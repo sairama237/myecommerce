@@ -1,26 +1,42 @@
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
-        <!-- <img src="../assets/img1.jpg" class="img-circle img-responsive " width="500px" height="240px" alt=""> -->
-      </div>
-      <div class="col-sm-6 ">
-        <div class="form-group">
-         
-          <label for="" class="btn-success">UserName:</label> <span class="glyphicon glyphicon-user"></span>
-          <input type="text" placeholder="username" class="form-control">
+  <form #userData="ngForm" (ngSubmit)="onsubmit(userData.value)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="../assets/img1.jpg" class="img-circle img-responsive " width="500px" height="240px" alt="">
         </div>
+        <div class="col-sm-6 ">
+          <div class="form-group">
 
-        <div class="form-group">
-          <label for="" class="btn-success">UserPassword:</label> <span class="glyphicon glyphicon-lock"></span>
-          <input type="password" placeholder="password" class="form-control">
+            <label for=""><i class="fa fa-user fa-fw"></i>UserName:</label>
+            <input type="text" placeholder="username" class="form-control" name="username" ngModel #nameRef="ngModel"
+              required minlength="5" pattern="[a-z]+[0-9]{4,6}">
+            <div *ngIf="nameRef.errors && (nameRef.touched ||nameRef.dirty)" class="btn-danger">
+              <div [hidden]="!nameRef.errors.required">Enter name</div>
+              <div [hidden]="!nameRef.errors.minlength">Enter atleast 5 Char</div>
+              <div [hidden]="!nameRef.errors.pattern">Enter atleast [a-z]+[0-9]</div>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for=""><i class="fa fa-key fa-fw"></i>UserPassword:</label>
+            <input type="password" placeholder="password" class="form-control" name="password" ngModel
+              #passwordRef="ngModel" required minlength="5" pattern="[a-z-A-Z]+[0-9]{4,6}">
+            <div *ngIf="passwordRef.errors && (passwordRef.touched ||passwordRef.dirty)" class="btn-primary">
+              <div [hidden]="!passwordRef.errors.required">Enter password</div>
+              <div [hidden]="!passwordRef.errors.minlength">Enter atleast 5 Char</div>
+              <div [hidden]="!passwordRef.errors.pattern">Enter Valid data </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <button [disabled]="!userData.valid" type="submit" class="btn-danger">submit</button>
+
+          </div>
+
         </div>
-        <div class="form-group">
-          <button type="submit" class="btn-danger">submit</button>
-
-        </div>
-
-      </div>
       </div>
     </div>
+  </form>
 </body>

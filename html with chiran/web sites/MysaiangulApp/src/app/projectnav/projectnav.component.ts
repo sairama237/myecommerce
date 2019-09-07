@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ProjectnavComponent implements OnInit {
 public myText:string="ECommerce CyberTech Pvt.Ltd"
+public time = new Date()
   constructor(private router:Router) { }
 
   ngOnInit() {
+    this.time
   }
   logout(){
     // console.log("this is sai")

@@ -18,15 +18,20 @@ currentEmployee: Employeess = {
 }
 
   constructor( private http:HttpClient) { }
+                //get emp data
   getMethod(){
 return this.http.get<Employeess[]>(this.Urls)
   }
-  //create emp data
+                  //create emp data
   createEmp(employess:Employeess):Observable<Employeess[]>{
     return this.http.post<Employeess[]>(this.Urls,employess)
   }
-  //update emp data
+                   //update emp data
   update(employess:Employeess):Observable<Employeess>{
     return this.http.put<Employeess>(this.Urls+ '/' + employess.id, employess)
+  }
+
+  deleteEmployee(id:Number):Observable<Employeess>{
+    return this.http.delete<Employeess>(this.Urls+'/'+id)
   }
 }

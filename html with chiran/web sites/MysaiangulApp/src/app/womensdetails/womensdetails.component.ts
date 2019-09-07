@@ -10,6 +10,7 @@ export class WomensdetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
 
 }

@@ -9,6 +9,8 @@ import {  Router } from '@angular/router';
   styleUrls: ['./addingproducsdetails.component.css']
 })
 export class AddingproducsdetailsComponent implements OnInit {
+  public confirmationstring:string ="New product is added in prodcuts"
+isAdded:boolean=false
 
   constructor(private serivces:ProductsdetailsService,private routers:Router) { }
 
@@ -18,12 +20,14 @@ export class AddingproducsdetailsComponent implements OnInit {
 
   createEmployee(currentEmployee: Employeess){
     if(currentEmployee.id === null){
-    this.serivces.createEmp(currentEmployee).subscribe((data) => this.serivces.getMethod())
+    this.serivces.createEmp(currentEmployee).subscribe((data) => {this.serivces.getMethod()
+    this.isAdded =true})
   }
   else{
     this.serivces.update(currentEmployee).subscribe(data =>this.serivces.getMethod())
   }
   }
+
   clearEmployee(currentEmployee: Employeess) {
     this.serivces.currentEmployee = {
       id: null,
