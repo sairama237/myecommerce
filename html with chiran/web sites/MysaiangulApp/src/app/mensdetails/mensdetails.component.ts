@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Component, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { WebapiService } from '../webapi.service';
 
 @Component({
   selector: 'app-mensdetails',
@@ -8,11 +9,14 @@ import { Route, Router } from '@angular/router';
 })
 export class MensdetailsComponent implements OnInit {
 
-  constructor(public router:Router) { }
-
+  constructor( public webApi:WebapiService,public router:Router) { }
+   public webImages=[]
   ngOnInit() {
+
+    this.webApi.getwepapi().subscribe(images =>this.webImages=images)
   }
-  seemore(){
-    this.router.navigate(['/mensdetails'])
+  addCart(Image){
+    console.log(Image)
+
   }
 }

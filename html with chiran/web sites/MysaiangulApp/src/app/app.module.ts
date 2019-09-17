@@ -51,6 +51,7 @@ import { WomensdetailsComponent } from './womensdetails/womensdetails.component'
 import { MensdetailslistComponent } from './mensdetailslist/mensdetailslist.component';
 import { CustomdireDirective } from './customdire.directive';
 
+
 @NgModule({
   declarations: [
     AppComponent,

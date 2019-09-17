@@ -1,18 +1,24 @@
 label{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
-    color:burlywood
+    color:burlywood;
+    text-transform:capitalize;
     
 }
-input.ng-invalid{
-    border-left: 2px solid red
+/* input.ng-invalid{
+    border-left: 2px solid red;
+    
 }
 input.ng-valid{
     border-left: 2px solid gray
-}
+} */
 .myclass{
     color: brown;
     font-size: 20px;
-    font-family: cursive
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: cornsilk;
+    text-transform:capitalize;
+    
 }

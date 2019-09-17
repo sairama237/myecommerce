@@ -1,7 +1,7 @@
 <p>
   mensdetails works!
 </p>
-<div class="container-fluid padding">
+<!-- <div class="container-fluid padding">
   <div class="row">
     <div class="col-md-6">
       <div class="card">
@@ -14,8 +14,7 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
           <h4 class="card-title"> Sai</h4>
           <p class="card-text display-4">I have 3 + years of exp in web Developer in octal systems at kukatpally near
             fouram mall </p>
-          <!-- <a href="https://www.google.com/ " target="_blank" class=" btn-info btn-outline-danger btn-lg">See more </a>
-           -->
+         
            <button type="submit"  class=" btn-info btn-outline-danger btn-lg" (click) ="seemore()">see more</button>
 
         </div>
@@ -70,7 +69,34 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<table class="table-bordered">
+  <tr *ngFor="let Image of webImages">
+      <td><img [src]="Image.urls.raw" alt="images from api" width="250px"height="270px"></td>
+      <td>{{Image.alt_description}}</td>
+      <td>{{Image.user.name}}</td>
+      <td>{{Image.user.location}}</td>
+      <!-- <td>{{Image.sponsorship.tagline}}</td> -->
+      <!-- <td>{{Image.sponsorship.impressions_id}}</td> -->
+      
+      <td>
+        
+      <div class="row">
+        <div class="col-md-6">
+      <button type="submit" class="btn btn-success" (click)="addCart(Image)"><i class="fa fa-cart-plus"></i>ADD TO
+        CART</button>
+      </div>
+        <div class="col-md-6">
+        <button type="submit" class="btn btn-danger ! mystyle" ><i class="fa fa-credit-card-alt" ></i>BUY
+          NOW</button>
+        </div>
+        </div>
+      
+      </td>
+  </tr>
+  
+</table>
 <div class="container-fluid">
     <div class="row">
     <div class="col-md-3">
