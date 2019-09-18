@@ -4,8 +4,8 @@
 <!-- <pre>{{userDataForm.value |json}}</pre> -->
 
 <div class="container-fluid">
-  <!-- <fieldset> -->
-    <!-- <legend align="center"> <h2 class=" btn btn-success">{{text | uppercase}}</h2></legend> -->
+  <fieldset>
+    <legend align="center"> <h2 class=" btn btn-success">{{text | uppercase}}</h2></legend>
   <form [formGroup]="userDataForm" (ngSubmit)="onSubmit(userDataForm)">
     <!-- nested form -->
     
@@ -148,5 +148,5 @@
     <h2 class="btn-outline-info" *ngIf="message">{{success}}</h2>
   </form>
 
-<!-- </fieldset> -->
+</fieldset>
 </div>

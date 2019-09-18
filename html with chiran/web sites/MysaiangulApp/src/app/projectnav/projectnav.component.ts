@@ -16,6 +16,6 @@ public time = new Date()
   }
   logout(){
     // console.log("this is sai")
-    this.router.navigate(["/user"])
+    this.router.navigate(["/user/signin"])
   }
 }

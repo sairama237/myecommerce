@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { SignupService } from '../signup.service';
 export interface Food {
   value: string;
   viewValue: string;
@@ -30,7 +31,7 @@ public checkboxData:string;
 public foods=[]
 
 
-  constructor() { }
+  constructor(public service:SignupService) { }
 
   ngOnInit() {
     this.producscheckboxs=[{id:1,checs:'Red'},{id:2,checs:'White'},{id:3,checs:'Black'}]
@@ -74,6 +75,7 @@ else{
   myObj.push(this.userDataForm.value)
   localStorage.setItem('userdata',JSON.stringify(myObj))
 }
+
 
   }
  

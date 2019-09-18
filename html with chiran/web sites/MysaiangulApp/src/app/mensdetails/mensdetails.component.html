@@ -1,6 +1,4 @@
-<p>
-  mensdetails works!
-</p>
+
 <!-- <div class="container-fluid padding">
   <div class="row">
     <div class="col-md-6">
@@ -70,11 +68,38 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
     </div>
   </div>
 </div> -->
+<body>
+  
 
+<div class="container-fluid">
+  
+    
+  <div class="row">
+    <div class="  mystyle col-md-2">
+        
+<form action="">
+    <fieldset>
+        <legend>Filters</legend>
+        <label for="">Quantity</label>
+  <input type="number">
+  <label for="">Name</label>
+  <input type="text">
+  <label for="">Rangers</label>
+  <input type="range" min="0" max="11">
+  <label>
+      <input  type="checkbox" />
+      <span>Indeterminate Style</span>
+    </label>
+</fieldset>
+</form>
+
+    </div>
+  
+    <div class=" offset-md-1  jumbotron col-md-9">
 <table class="table-bordered">
   <tr *ngFor="let Image of webImages">
       <td><img [src]="Image.urls.raw" alt="images from api" width="250px"height="270px"></td>
-      <td>{{Image.alt_description}}</td>
+      <!-- <td>{{Image.alt_description}}</td> -->
       <td>{{Image.user.name}}</td>
       <td>{{Image.user.location}}</td>
       <!-- <td>{{Image.sponsorship.tagline}}</td> -->
@@ -88,7 +113,7 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
         CART</button>
       </div>
         <div class="col-md-6">
-        <button type="submit" class="btn btn-danger ! mystyle" ><i class="fa fa-credit-card-alt" ></i>BUY
+        <button type="submit" class="btn btn-danger ! mystyle1" ><i class="fa fa-credit-card-alt" ></i>BUY
           NOW</button>
         </div>
         </div>
@@ -97,6 +122,10 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
   </tr>
   
 </table>
+</div>
+</div>
+</div>
+</body>
 <div class="container-fluid">
     <div class="row">
     <div class="col-md-3">

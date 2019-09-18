@@ -30,6 +30,15 @@ const myRoutes:Routes=[
   children:[{path:"signup",component:SignupComponent},
             {path:"signin",component:SigninComponent}]
 },
+{
+  path:"user/signin",
+  component:SigninComponent
+},
+{
+  path:"user/signup",
+  component:SignupComponent
+},
+
 
 {
   path:"mens",

@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6">
-          <img src="../assets/bookss.jpg" class="img-circle img-responsive " width="500px" height="240px" alt="">
+          <img src="../assets/BG 1.jpg" class="img-circle img-responsive " width="500px" height="240px" alt="">
         </div>
         <div class="col-sm-6 ">
           <div class="form-group">
@@ -34,9 +34,18 @@
             <button [disabled]="!userData.valid" type="submit" class="btn-danger">submit</button>
 
           </div>
-
+          <hr>
+          <div class="row">
+            <div class="col-md-5">
+          <p>Don't have an account?</p>
+        </div>
+        <div class="col-md-7">
+          <a  class="btn btn-success" (click)="onSubmits()">Sign Up</a>
+        </div>
+        </div>
         </div>
       </div>
     </div>
+
   </form>
 </body>
