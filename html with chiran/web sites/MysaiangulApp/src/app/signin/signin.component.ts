@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SignupService } from '../signup.service';
 
 
 @Component({
@@ -9,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(public router:Router,public service:SignupService) { }
 
   ngOnInit() {
   }
   onsubmit(data){
-    console.log(data)
+    this.service.loginData(data).subscribe((datas)=>{this.router.navigate(['/Home'])})
   }
   onSubmits(){
     console.log('hi')

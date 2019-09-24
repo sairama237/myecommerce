@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebapiService } from '../webapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mensdetailslist',
@@ -8,7 +9,7 @@ import { WebapiService } from '../webapi.service';
 })
 export class MensdetailslistComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
   
@@ -16,6 +17,7 @@ export class MensdetailslistComponent implements OnInit {
 
   addCart(){
     console.log("this is card data")
+   
   }
   buyNow(){
     console.log("this is card datas")

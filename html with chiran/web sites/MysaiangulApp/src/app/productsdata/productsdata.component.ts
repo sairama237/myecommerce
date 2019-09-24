@@ -10,7 +10,7 @@ import { Route, Router } from '@angular/router';
 })
 export class ProductsdataComponent implements OnInit {
    public myemployee =[]
-   public deletedata:string="product was deleted"
+   public deletedata:string="product was deleted"    
    isdeleted:boolean=false
   constructor(private service:ProductsdetailsService,private router:Router) {}
 

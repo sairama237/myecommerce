@@ -12,7 +12,13 @@ import { WomensdetailsComponent } from '../womensdetails/womensdetails.component
 import { ProductsdataComponent } from '../productsdata/productsdata.component';
 import { AddingproducsdetailsComponent } from '../addingproducsdetails/addingproducsdetails.component';
 import { MensdetailslistComponent } from '../mensdetailslist/mensdetailslist.component';
+import { PaymentgatewayComponent } from '../paymentgateway/paymentgateway.component';
+import { MycartComponent } from '../mycart/mycart.component';
 const myRoutes:Routes=[
+  {
+    path:"",
+    component:SigninComponent
+  },
   {
     path:"Home",
     component:HomeComponent
@@ -59,6 +65,14 @@ const myRoutes:Routes=[
 {
   path:"mensdetails",
   component:MensdetailslistComponent
+},
+{
+  path:"mycart",
+  component:MycartComponent
+},
+{
+  path:"payment",
+  component:PaymentgatewayComponent
 }
 
 

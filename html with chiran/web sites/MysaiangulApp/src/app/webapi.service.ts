@@ -13,4 +13,10 @@ public url:string="https://api.unsplash.com/photos/?client_id=ae347936a326b0f23a
     return this.myhttp.get<any>(this.url)
     
   }
+  addimagetocart(Images:any){
+    localStorage.setItem("image",JSON.stringify(Images))
+  }
+  addtocart(){ 
+  return JSON.parse(localStorage.getItem('image'))
+  }
 }

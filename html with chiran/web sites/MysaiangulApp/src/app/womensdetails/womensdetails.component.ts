@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WomensService } from '../womens.service';
 
 @Component({
   selector: 'app-womensdetails',
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./womensdetails.component.css']
 })
 export class WomensdetailsComponent implements OnInit {
-
-  constructor() { }
+products=[]
+  constructor( public service:WomensService) { }
 
   ngOnInit() {
-  
+  this.service.getMethod().subscribe((data)=>this.products =data)
   }
-
+  addTocart(product){
+    console.log(product)
+  }
 }

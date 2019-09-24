@@ -1,0 +1,47 @@
+{
+  "Signup": [
+    {
+      "name": {
+        "firstname": "saik",
+        "lastname": "kundur"
+      },
+      "username": "saiku",
+      "password": "saik1234",
+      "retrypassword": "saik1234",
+      "email": "saikundurthi237@gmail.com",
+      "checkbox": true,
+      "gender": "Male",
+      "dropdown": "",
+      "id": 1
+    },
+    {
+      "name": {
+        "firstname": "saisa",
+        "lastname": "ramaku"
+      },
+      "username": "ramsai",
+      "password": "sair1234",
+      "retrypassword": "sair1234",
+      "email": "saikundurthi237@gmail.com",
+      "checkbox": true,
+      "gender": "Male",
+      "dropdown": "",
+      "id": 2
+    },
+    {
+      "name": {
+        "firstname": "ramaku",
+        "lastname": "saikun"
+      },
+      "username": "ramasa",
+      "password": "sair1234",
+      "retrypassword": "sair1234",
+      "email": "saikundurthi239@gmail.com",
+      "checkbox": true,
+      "gender": "Male",
+      "dropdown": "",
+      "image": "",
+      "id": 3
+    }
+  ]
+}

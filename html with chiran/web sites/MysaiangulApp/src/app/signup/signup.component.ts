@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SignupService } from '../signup.service';
+import { Route, Router } from '@angular/router';
 export interface Food {
   value: string;
   viewValue: string;
@@ -31,7 +32,7 @@ public checkboxData:string;
 public foods=[]
 
 
-  constructor(public service:SignupService) { }
+  constructor(public service:SignupService,public router:Router) { }
 
   ngOnInit() {
     this.producscheckboxs=[{id:1,checs:'Red'},{id:2,checs:'White'},{id:3,checs:'Black'}]
@@ -55,16 +56,23 @@ public foods=[]
     email : new FormControl('',[Validators.required,Validators.pattern('[a-z0-9]+\@+[a-z]+\.(com|live)')]),
     checkbox:new FormControl('',Validators.required),
     gender:new FormControl('',Validators.required),
-    dropdown:new FormControl('',Validators.required)
+    dropdown:new FormControl('',Validators.required),
+    image: new FormControl('',Validators.required)
   })
  
 
   onSubmit(){
     this.Submitted=true
-    this.message=true
+    
     // this.userDataForm.get('checkbox').setValue(this.proArray)
     // console.log(this.proArray)
 console.log(this.userDataForm.value)
+this.service.registredData(this.userDataForm.value)
+.subscribe((datas)=>{
+  this.message=true 
+  this.router.navigate(['user/signin'])
+})
+
 if(localStorage.getItem('userdata')== null){
 let myregFormdata=[]
 myregFormdata.push(this.userDataForm.value)

@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
 <body>
   <div class="container-fluid myhead1">
     <div class="row">
@@ -27,7 +30,6 @@
             <!-- <button class="search-btn"><i class="fa fa-search"></i></button> -->
           </form>
         </div>
-
       </div>
       <div class="col-md-3">
         <div class="dropdown dropright">
@@ -48,7 +50,7 @@
 
   </div>
 
-  <nav class="navbar navbar-tab">
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
     <div class="container-fluid ">
       <div class="dropdown">
         <i class="fa fa-align-justify" title="Align Justify"></i>
@@ -73,13 +75,15 @@
 
         </li>
         <li><a routerLink="/productsdata">Product</a></li>
-        <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
+        
+        <li><a routerLink="/mycart">MYcart {{countdata}}</a></li>
+        <!-- <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li> -->
         <li><a routerLink="/mens">Mens</a></li>
         <li><a routerLink="/womens">Women</a></li>
 
 
         <li>
-          <button type="submit" (click)="logout()">Logout</button>
+          <button type="submit" class="btn-danger" (click)="logout()">Logout</button>
         </li>
 
       </ul>

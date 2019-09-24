@@ -20,7 +20,7 @@ currentEmployee: Employeess = {
   constructor( private http:HttpClient) { }
                 //get emp data
   getMethod(){
-return this.http.get<Employeess[]>(this.Urls)
+return this.http.get<Employeess[]>(this.Urls)    
   }
                   //create emp data
   createEmp(employess:Employeess):Observable<Employeess[]>{

@@ -1,0 +1,27 @@
+<p>
+  mycart works!
+</p>
+count is :{{number}}
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <th>Id</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let imgcart of imageaddtocart">
+      <td>
+          {{imgcart.id}}
+        </td>
+<td>
+  
+  <img [src]="imgcart.urls.raw" alt="" width="150px" height="150px">
+</td>
+<td>{{imgcart.user.name}}</td>
+<td>
+  <button type="submit" (click)="onAddid(imgcart)">+</button>
+</td>
+  </tr>
+</tbody>
+</table>

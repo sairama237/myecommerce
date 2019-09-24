@@ -95,11 +95,22 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
 
     </div>
   
-    <div class=" offset-md-1  jumbotron col-md-9">
-<table class="table-bordered">
+    <div class=" offset-md-1   col-md-9">
+        <h2>{{alert.id}}</h2>
+<table class="table-bordered table-responsive table-hover">
+  <thead class="thead-light">
+    <tr class="text-center">
+      <th>Id</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Loaction</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let Image of webImages">
+      <td>{{Image.id}}</td>
       <td><img [src]="Image.urls.raw" alt="images from api" width="250px"height="270px"></td>
-      <!-- <td>{{Image.alt_description}}</td> -->
       <td>{{Image.user.name}}</td>
       <td>{{Image.user.location}}</td>
       <!-- <td>{{Image.sponsorship.tagline}}</td> -->
@@ -113,14 +124,14 @@ onmouseout="OrteliusWorldMap.width='200';OrteliusWorldMap.height='300';">
         CART</button>
       </div>
         <div class="col-md-6">
-        <button type="submit" class="btn btn-danger ! mystyle1" ><i class="fa fa-credit-card-alt" ></i>BUY
+        <button type="submit" class="btn btn-danger ! mystyle1" (click)="buyCart(Image)" ><i class="fa fa-credit-card-alt" ></i>BUY
           NOW</button>
         </div>
         </div>
       
       </td>
   </tr>
-  
+</tbody>
 </table>
 </div>
 </div>

@@ -50,6 +50,8 @@ import { MensdetailsComponent } from './mensdetails/mensdetails.component';
 import { WomensdetailsComponent } from './womensdetails/womensdetails.component';
 import { MensdetailslistComponent } from './mensdetailslist/mensdetailslist.component';
 import { CustomdireDirective } from './customdire.directive';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
+import { MycartComponent } from './mycart/mycart.component';
 
 
 @NgModule({
@@ -98,6 +100,8 @@ import { CustomdireDirective } from './customdire.directive';
     WomensdetailsComponent,
     MensdetailslistComponent,
     CustomdireDirective,
+    PaymentgatewayComponent,
+    MycartComponent,
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,ReactiveFormsModule,

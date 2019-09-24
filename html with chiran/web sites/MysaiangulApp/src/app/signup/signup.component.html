@@ -137,12 +137,24 @@
     </div>
    
       <div class="form-group">
-      <label>Favorite food</label>
-  <select formControlName="dropdown">
-    <option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}} 
-    <option>
-  </select>
+        <div class="col s12">
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+        <div class="file-field ">
+          <div class="btn">
+            <span>File</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" formControlName="image">
+          </div>
+        </div>
 </div>
     <button type="submit" class="btn-danger btn-block">Submit</button>
     <h2 class="btn-outline-info" *ngIf="message">{{success}}</h2>

@@ -7,9 +7,18 @@ import { Signup } from './signup';
   providedIn: 'root'
 })
 export class SignupService {
-  public url:string ="http://localhost:3000/products"
+  public url:string ="http://localhost:3004/Signup";
+  public loginapi:string ="http://localhost:3001/Signin"
   constructor(public http:HttpClient) { }
+
+        //Signup data from  signup component 
+  registredData(data){
+    return this.http.post(this.url,data);
+  }
+         //Signin data from  signin component 
+  loginData(datas){
+    return this.http.post(this.loginapi,datas);
+  } 
+
 }
-// sendingdata(Signupdata){
-//   return this.http.post<Signup[]>(this.url,Signupdata);
-// }
+
