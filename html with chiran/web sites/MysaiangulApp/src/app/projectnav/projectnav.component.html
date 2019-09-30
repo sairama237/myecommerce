@@ -1,6 +1,7 @@
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
   <div class="container-fluid myhead1">
     <div class="row">
@@ -28,6 +29,8 @@
               <option value="1">Category 02</option>
             </select>
             <!-- <button class="search-btn"><i class="fa fa-search"></i></button> -->
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                class="fa fa-search"></i>Search</button>
           </form>
         </div>
       </div>
@@ -36,12 +39,12 @@
 
           <button type="submit" class="btn-danger dropdown-toggle" data-toggle="dropdown">My Accout</button>
           <div class="dropdown-menu">
-            <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+            <li><a href="#" routerLink="/mycart"><i class="fa fa-user-o"></i> My Account</a></li>
             <!-- <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li> -->
             <li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
             <li><a href="#"><i class="fa fa-check"></i> Checkout</a></li>
-            <li><a href="#"><i class="fa fa-unlock-alt"></i> Login</a></li>
-            <li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>
+            <li><a href="#" routerLink="/user/signin"><i class="fa fa-unlock-alt"></i> Login</a></li>
+            <li><a href="#" routerLink="/user/signup"><i class="fa fa-user-plus"></i> Create An Account</a></li>
 
           </div>
         </div>
@@ -50,20 +53,31 @@
 
   </div>
 
-  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <!-- <nav class="navbar navbar-tab">
     <div class="container-fluid ">
       <div class="dropdown">
         <i class="fa fa-align-justify" title="Align Justify"></i>
         <button type="submit" class="btn-danger dropdown-toggle" data-toggle="dropdown">Pageslist</button>
         <div class="dropdown-menu">
           <a class="dropdown-item" routerLink="/Home">Home </a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/about">about</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/contact">contact</a>
-          <a class="dropdown-item" routerLink="/user">Signin/Signup</a>
+          <div class="dropdown-divider"></div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              page of Signin/Signup
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/user">Signin/Signup</a>
+             
+            </div>
+          </div>
         </div>
       </div>
       <div class="navbar-header ">
-        <!-- <img src="../assets/ecom.jpg" alt="" width="50px"> -->
+        <img src="../assets/ecom.jpg" alt="" width="50px"> 
       </div>
       <ul class="">
 
@@ -75,20 +89,86 @@
 
         </li>
         <li><a routerLink="/productsdata">Product</a></li>
-        
-        <li><a routerLink="/mycart">MYcart {{countdata}}</a></li>
-        <!-- <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li> -->
-        <li><a routerLink="/mens">Mens</a></li>
+        <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
+        <li><a routerLink="/imagedata">Mens</a></li>
         <li><a routerLink="/womens">Women</a></li>
 
 
         <li>
-          <button type="submit" class="btn-danger" (click)="logout()">Logout</button>
+          <button type="submit" (click)="logout()">Logout</button>
         </li>
 
       </ul>
     </div>
+  </nav> -->
+  <nav class="navbar navbar-expand-lg bg-red navbar-dark">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav nav justify-content-end">
+          <li class="nav-item ">
+            <a routerLink="/Home"> <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/about"> <i class="fa fa-address-book"></i> About</a>
+
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/productsdata">Product</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/mycart"><i class="fa fa-heart-o"></i> MYcart<span
+                class="badge badge-info badge-pill">{{countdata}}</span></a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/mens">Mens</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/womens">Women</a>
+          </li>
+          <!-- dropdown  -->
+          <li class="nav-item dropdown">
+            <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+              Pageslist
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" routerLink="/Home">Home </a>
+              <a class="dropdown-item" routerLink="/about">about</a>
+              <a class="dropdown-item" routerLink="/contact">contact</a>
+              <!-- <a class="dropdown-item" routerLink="/user">Signin/Signup</a> -->
+              <div class="dropdown-divider"></div>
+              <div class="btn-group">
+                <a type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                  id="navbarDropdownMenuLink">
+                  Create My Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" routerLink="/user">Signin/Signup</a>
+
+                </div>
+              </div>
+               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/mens">Mens data</a>
+            </div>
+          </li>
+          
+            <a type="submit"  (click)="logout()">Logout</a>
+          
+
+        </ul>
+
+      </div>
+    </div>
   </nav>
 </body>
 <!-- {{time}} -->
+
 <router-outlet></router-outlet>

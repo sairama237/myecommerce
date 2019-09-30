@@ -19,4 +19,7 @@ public url:string="https://api.unsplash.com/photos/?client_id=ae347936a326b0f23a
   addtocart(){ 
   return JSON.parse(localStorage.getItem('image'))
   }
+  removetocart(){
+    return localStorage.removeItem('image')
+  }
 }

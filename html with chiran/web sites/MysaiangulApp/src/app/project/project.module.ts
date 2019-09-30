@@ -37,7 +37,7 @@ const myRoutes:Routes=[
             {path:"signin",component:SigninComponent}]
 },
 {
-  path:"user/signin",
+  path:"user/signin", 
   component:SigninComponent
 },
 {

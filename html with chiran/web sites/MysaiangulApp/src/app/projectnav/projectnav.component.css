@@ -2,3 +2,15 @@
     background-color:#263238;font-family: 'Times New Roman', Times, serif;
     font-size: 25px;text-align: center;color:#d50000
 }
+ul>li>a{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+ul>li>a:hover{
+    color:coral
+}
+ul>li>a:active{
+    color:green
+}

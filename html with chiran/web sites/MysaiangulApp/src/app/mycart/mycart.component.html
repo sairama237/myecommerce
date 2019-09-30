@@ -3,7 +3,7 @@
 </p>
 count is :{{number}}
 <table class="table table-bordered">
-  <thead class="thead-light">
+  <thead class="thead-light" *ngIf="imageaddtocart>0">
     <th>Id</th>
     <th>Image</th>
     <th>Name</th>
@@ -12,7 +12,7 @@ count is :{{number}}
   <tbody>
   <tr *ngFor="let imgcart of imageaddtocart">
       <td>
-          {{imgcart.id}}
+          {{imgcart.id}} 
         </td>
 <td>
   
@@ -20,7 +20,9 @@ count is :{{number}}
 </td>
 <td>{{imgcart.user.name}}</td>
 <td>
-  <button type="submit" (click)="onAddid(imgcart)">+</button>
+  <button type="submit" (click)="onAddid(imgcart)" class="btn btn-success">+</button>
+  <input type="text" [ngModel]="imgcart.id" (ngModelChage)="imgcart.id"> 
+  <button type="submit" (click)="onDelete(imgcart)" class="btn btn-danger">-</button>
 </td>
   </tr>
 </tbody>

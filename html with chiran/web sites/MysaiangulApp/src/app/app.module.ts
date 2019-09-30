@@ -52,6 +52,7 @@ import { MensdetailslistComponent } from './mensdetailslist/mensdetailslist.comp
 import { CustomdireDirective } from './customdire.directive';
 import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { Bootstarp4dropComponent } from './bootstarp4drop/bootstarp4drop.component';
 
 
 @NgModule({
@@ -102,6 +103,7 @@ import { MycartComponent } from './mycart/mycart.component';
     CustomdireDirective,
     PaymentgatewayComponent,
     MycartComponent,
+    Bootstarp4dropComponent,
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,ReactiveFormsModule,

@@ -57,7 +57,8 @@ public foods=[]
     checkbox:new FormControl('',Validators.required),
     gender:new FormControl('',Validators.required),
     dropdown:new FormControl('',Validators.required),
-    image: new FormControl('',Validators.required)
+    image: new FormControl('',Validators.required),
+    phonennumber:new FormControl('',Validators.required)
   })
  
 

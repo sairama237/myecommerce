@@ -5,137 +5,139 @@
 
 <div class="container-fluid">
   <fieldset>
-    <legend align="center"> <h2 class=" btn btn-success">{{text | uppercase}}</h2></legend>
-  <form [formGroup]="userDataForm" (ngSubmit)="onSubmit(userDataForm)">
-    <!-- nested form -->
-    
-    <div formGroupName="name">
-      <div class="form-group">
-        <div class="row">
-          <div class="col s6">
-            <label for="">First name:</label>
-            <input type="text" class="form-control" placeholder="First name" formControlName="firstname">
-            <div *ngIf="Submitted && userDataForm.get('name.firstname').errors">
-              <div *ngIf="userDataForm.get('name.firstname')['errors']['required']">
-                <span class="btn btn-outline-primary"> firstname is required</span>
-              </div>
-              <div *ngIf="userDataForm.get('name.firstname')['errors']['minlength']">
-                <span class="btn-outline-primary"> name having 3 charaters </span>
-              </div>
-              <div *ngIf="userDataForm.get('name.firstname')['errors']['maxlength']">
-                <span class="btn-outline-primary"> name having 6 charaters </span>
+    <legend align="center">
+      <h2 class=" btn btn-success">{{text | uppercase}}</h2>
+    </legend>
+    <form [formGroup]="userDataForm" (ngSubmit)="onSubmit(userDataForm)">
+      <!-- nested form -->
+
+      <div formGroupName="name">
+        <div class="form-group">
+          <div class="row">
+            <div class="col s6">
+              <label for="">First name:</label>
+              <input type="text" class="form-control" placeholder="First name" formControlName="firstname">
+              <div *ngIf="Submitted && userDataForm.get('name.firstname').errors">
+                <div *ngIf="userDataForm.get('name.firstname')['errors']['required']">
+                  <span class="btn btn-outline-primary"> firstname is required</span>
+                </div>
+                <div *ngIf="userDataForm.get('name.firstname')['errors']['minlength']">
+                  <span class=" btn btn-outline-primary"> name having 3 charaters </span>
+                </div>
+                <div *ngIf="userDataForm.get('name.firstname')['errors']['maxlength']">
+                  <span class="btn btn-outline-primary"> name having 6 charaters </span>
+                </div>
               </div>
             </div>
-          </div> 
-          <div class="col s6">
-            <label for="">last name:</label>
-            <input type="text" class="form-control" placeholder="Last name" formControlName="lastname">
-             <div *ngIf="Submitted && userDataForm.get('name.lastname').errors">
-              <div *ngIf="userDataForm.get('name.lastname')['errors']['required']">
-                <span class="btn-outline-warning">Lastname is required</span>
+            <div class="col s6">
+              <label for="">last name:</label>
+              <input type="text" class="form-control" placeholder="Last name" formControlName="lastname">
+              <div *ngIf="Submitted && userDataForm.get('name.lastname').errors">
+                <div *ngIf="userDataForm.get('name.lastname')['errors']['required']">
+                  <span class="btn btn-outline-warning">Lastname is required</span>
+                </div>
+                <div *ngIf="userDataForm.get('name.lastname')['errors']['minlength']">
+                  <span class=" btn btn-outline-warning">Lastname having 5 charaters </span>
+                </div>
+                <div *ngIf="userDataForm.get('name.lastname')['errors']['maxlength']">
+                  <span class=" btn btn-outline-warning"> Lastname having 7 charaters </span>
+                </div>
               </div>
-              <div *ngIf="userDataForm.get('name.lastname')['errors']['minlength']">
-                <span class="btn-outline-warning">Lastname having 5 charaters </span>
-              </div>
-              <div *ngIf="userDataForm.get('name.lastname')['errors']['maxlength']">
-                <span class="btn-outline-warning"> Lastname having 7 charaters </span>
-              </div>
-            </div>   
-            
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- username and password -->
-    <div class="form-group">
-      <div class="row">
-        <div class="col s6">
-          <label for=""> UserName:</label>
-          <input type="text" class="form-control" placeholder="User name" formControlName="username">
-          <div *ngIf="Submitted && userDataForm.get('username').errors">
-            <div *ngIf="userDataForm.get('username')['errors']['required']">
-              <span class="btn-outline-secondary"> username is required</span>
+      <!-- username and password -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col s6">
+            <label for=""> UserName:</label>
+            <input type="text" class="form-control" placeholder="User name" formControlName="username">
+            <div *ngIf="Submitted && userDataForm.get('username').errors">
+              <div *ngIf="userDataForm.get('username')['errors']['required']">
+                <span class=" btn btn-outline-secondary"> username is required</span>
+              </div>
+              <div *ngIf="userDataForm.get('username')['errors']['minlength']">
+                <span class=" btn btn-outline-secondary">username having min length 5 charaters </span>
+              </div>
+              <div *ngIf="userDataForm.get('username')['errors']['maxlength']">
+                <span class="btn btn-outline-secondary">username having max length 7 charaters </span>
+              </div>
             </div>
-             <div *ngIf="userDataForm.get('username')['errors']['minlength']">
-              <span class="btn-outline-secondary">username having min length 5 charaters </span>
-            </div>
-            <div *ngIf="userDataForm.get('username')['errors']['maxlength']">
-              <span class="btn-outline-secondary">username having max length 7 charaters </span>
-            </div> 
           </div>
-        </div>
-        <div class="col s6">
-          <label for="">PassWord:</label>
-          <input type="password" class="form-control" placeholder="password" formControlName="password">
-          <div *ngIf="Submitted && userDataForm.get('password').errors">
-          <div *ngIf="userDataForm.get('password')['errors']['required']">
-            <span class="btn-outline-dark">password is required</span>
-          </div>
-          <!-- <div *ngIf="userDataForm.get('password')['errors']['minlength']">
+          <div class="col s6">
+            <label for="">PassWord:</label>
+            <input type="password" class="form-control" placeholder="password" formControlName="password">
+            <div *ngIf="Submitted && userDataForm.get('password').errors">
+              <div *ngIf="userDataForm.get('password')['errors']['required']">
+                <span class="btn btn-outline-dark">password is required</span>
+              </div>
+              <!-- <div *ngIf="userDataForm.get('password')['errors']['minlength']">
             <small class="myclass">password is having 5 minlength</small>
           </div>
           <div *ngIf="userDataForm.get('password')['errors']['maxlength']">
             <small class="myclass">password is having 7 maxlength</small>
           </div> -->
-          <div *ngIf="userDataForm.get('password')['errors']['pattern']">
-            <span class="btn-outline-dark">password having pattern </span>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col s6">
-          <label for="">Retry-Password:</label>
-          <input type="password" class="form-control" placeholder="retrypassword" formControlName="retrypassword">
-        </div>
-        <div class="col s6">
-          <label for="">Email id:</label>
-          <input type="email" class="form-control" placeholder="email" formControlName="email">
-          <div *ngIf="Submitted && userDataForm.get('email').errors">
-              <div *ngIf="userDataForm.get('email')['errors']['required']">
-                  <span class="btn-outline-dark">email required </span>
-                </div>
-            <div *ngIf="userDataForm.get('email')['errors']['pattern']">
-              <span class="btn-outline-dark">email having pattern </span>
+              <div *ngIf="userDataForm.get('password')['errors']['pattern']">
+                <span class="btn btn-outline-dark">password having pattern </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col s6">
-          <label>products:</label>
-          <label *ngFor="let producscheckbox of producscheckboxs">
-            <input type="checkbox" value="{{producscheckbox.checs}}" (click)="onClicked($event)"
-              formControlName="checkbox" />
-            <span>{{producscheckbox.checs}}</span>
-          </label>
-          <div *ngIf="Submitted && userDataForm.get('checkbox').errors">
-              <div *ngIf="userDataForm.get('checkbox')['errors']['required']">
-                  <span class="btn-outline-dark">Please select one checkbox is required </span>
-                </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col s6">
+            <label for="">Retry-Password:</label>
+            <input type="password" class="form-control" placeholder="retrypassword" formControlName="retrypassword">
+          </div>
+          <div class="col s6">
+            <label for="">Email id:</label>
+            <input type="email" class="form-control" placeholder="email" formControlName="email">
+            <div *ngIf="Submitted && userDataForm.get('email').errors">
+              <div *ngIf="userDataForm.get('email')['errors']['required']">
+                <span class=" btn btn-outline-dark">email required </span>
+              </div>
+              <div *ngIf="userDataForm.get('email')['errors']['pattern']">
+                <span class=" btn btn-outline-dark">email having pattern </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col s6">
-        <label for="">Gender:</label>
-        <label *ngFor="let radioGender of radioGenders">
-          <input type="radio" class="with-gap" name="gender" [value]="radioGender"
-            formControlName="gender"><span>{{radioGender}}</span>
-        </label>
-        <div *ngIf="Submitted && userDataForm.get('gender').errors">
-            <div *ngIf="userDataForm.get('gender')['errors']['required']">
-                <span class=" btn btn-outline-dark">Gender is required </span>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col s6">
+            <label>products:</label>
+            <label *ngFor="let producscheckbox of producscheckboxs">
+              <input type="checkbox" value="{{producscheckbox.checs}}" (click)="onClicked($event)"
+                formControlName="checkbox" />
+              <span>{{producscheckbox.checs}}</span>
+            </label>
+            <div *ngIf="Submitted && userDataForm.get('checkbox').errors">
+              <div *ngIf="userDataForm.get('checkbox')['errors']['required']">
+                <span class="btn-outline-dark">Please select one checkbox is required </span>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+          <label for="">Gender:</label>
+          <label *ngFor="let radioGender of radioGenders">
+            <input type="radio" class="with-gap" name="gender" [value]="radioGender"
+              formControlName="gender"><span>{{radioGender}}</span>
+          </label>
+          <div *ngIf="Submitted && userDataForm.get('gender').errors">
+            <div *ngIf="userDataForm.get('gender')['errors']['required']">
+              <span class=" btn btn-outline-dark">Gender is required </span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-   
+
       <div class="form-group">
         <div class="col s12">
           <select>
@@ -155,10 +157,31 @@
             <input class="file-path validate" type="text" formControlName="image">
           </div>
         </div>
-</div>
-    <button type="submit" class="btn-danger btn-block">Submit</button>
-    <h2 class="btn-outline-info" *ngIf="message">{{success}}</h2>
-  </form>
+        <div class="form-group">
+          <div class="row">
+            <div class="col s6">
+              <label for="">Phone number</label>
+              <input type="text" formControlName="phonennumber">
+              <div *ngIf="Submitted && userDataForm.get('phonennumber').errors">
+                <div *ngIf="userDataForm.get('username')['errors']['required']">
+                  <span class=" btn btn-warning">Phone Number is Required</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <label for="">date of brith</label>
+              <input type="date">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="">zipcode</label>
+        <input type="text">
+      </div>
+      <button type="submit" class="btn-danger btn-block">Submit</button>
+      <h2 class="btn-outline-info" *ngIf="message">{{success}}</h2>
+    </form>
 
-</fieldset>
+  </fieldset>
 </div>
